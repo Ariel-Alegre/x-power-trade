@@ -1,0 +1,10 @@
+{
+    "logines": {
+        "login": "Accedi",
+        "no-count": "Non hai ancora un account?",
+        "register": " Registrati",
+        "connect_redes": "Accedere con i social media",
+        "address_email": "E-mail",
+        "password": "Password"
+    }
+}

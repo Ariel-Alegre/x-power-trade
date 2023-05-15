@@ -1,0 +1,28 @@
+.AboutUsContainer {
+    background-image: url('../../../../image/AbaoutUS-bg.jpg');
+    background-position: bottom center;
+    height: 50vh;
+    margin-top: 20px;
+    .TitlesAbout {
+    text-align: center;
+    }
+
+    .TitlesAbout h1 {
+        color: #FFFFFF;
+        font-family: "Poppins", Sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .TitlesAbout h2 {
+        color: #1976d2;
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+
+}

@@ -1,0 +1,208 @@
+.panelContainer {
+ margin-top: 20px;
+ margin-left: 50px;
+ margin-bottom: 600px;
+}
+
+
+
+.img {
+  width: 700px;
+  height: 250px;
+  margin-left: 8%;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.ButtonAndTextContainer {
+  margin-top: -210px;
+  display: grid;
+  margin-left: 150px;
+}
+.btn {
+  width: 300px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.text {
+  color: white;
+  width: 350px;
+  font-weight: 600;
+}
+
+.summary {
+  margin-top: 80px;
+  margin-left: 8%;
+  width: 700px;
+}
+
+.summaryDetail {
+  display: flex;
+  box-shadow: 0px 0px 1px black;
+  border-radius: 8px;
+  gap: 50px;
+  margin-top: 25px;
+}
+
+.linea {
+  width: 180px;
+  height: 0.4rem;
+  background: #1976d2;
+  border-radius: 0.8rem;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+.balance {
+  margin-left: 15px;
+}
+
+.summerFinance {
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.7;
+  font-weight: 700;
+  color: #6585a4;
+  
+}
+
+.summaryNumber {
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+.neto {
+  margin-left: -35px;
+}
+
+.margen {
+  margin-left: -35px;
+}
+
+.containerButton {
+  display: flex;
+  gap: 50px;
+  margin-left: 8%;
+  margin-top: 30px;
+}
+
+.containerButton button {
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 1px;
+}
+
+.containerButton button:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+.positionClosed {
+  margin-left: 8%;
+  box-shadow: 0px 0px 1px black;
+  margin-top: 30px;
+  width: 700px;
+  border-radius: 8px;
+  height: 240px;
+  position: absolute;
+}
+.positionClosed h4 {
+  margin-left: 3%;
+  margin-top: 15px;
+}
+
+.notTrading {
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 1px black;
+  background-color: #e7f1fc6a;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 658px;
+  height: 150px;
+  border-radius: 8px;
+  position: absolute;
+  color: #6585a4;
+  font-weight: 500;
+  
+
+}
+
+.notTrading p {
+  margin-left: 7.5%;
+  margin-top: 40px;
+  color: #6585a4;
+}
+
+.notTrading button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+.notTrading button span {
+  font-size: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Transaction {
+  margin-top: 300px;
+  margin-left: 8%;
+  box-shadow: 0px 0px 1px black;
+  width: 700px;
+  border-radius: 8px;
+  height: 240px;
+  position: absolute;
+
+}
+
+.Transaction h4 {
+  margin-left: 3%;
+  margin-top: 15px;
+}
+.detailTransaction {
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 1px black;
+  background-color:   #e7f1fc6a;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 658px;
+  height: 150px;
+  border-radius: 8px;
+  position: absolute;
+  color: #6585a4;
+  font-weight: 500;
+
+}
+
+.detailTransaction p {
+  margin-left: 7.5%;
+  margin-top: 40px;
+}
+
+.detailTransaction button{
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+.detailTransaction button span {
+  font-size: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+

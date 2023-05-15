@@ -1,0 +1,10 @@
+{
+    "logines": {
+        "login": "log in",
+        "no-count": "Do not you have an account yet?",
+        "register": "sign up",
+        "connect_redes": "Connect with social networks",
+        "address_email": "Email",
+        "password": "password"
+    }
+}

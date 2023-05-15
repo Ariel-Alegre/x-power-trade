@@ -1,0 +1,43 @@
+.selectContainer {
+margin-top: -36.7rem;
+margin-left: 30%;
+display: flex;
+width: 850px;
+
+}
+
+.numberAccount {
+    box-shadow: 0px 0px 1px  ;
+    width: 110px;
+    text-align: center;
+    height: 50px;
+    border-radius:  8px 0px 0px 8px;
+  
+  
+} 
+.type {
+    box-shadow: 0px 0px 1px  ;
+    width: 110px;
+    text-align: center;
+    height: 50px;
+    border-radius:  0px 8px 8px 0px;
+}
+
+.divisa {
+    box-shadow: 0px 0px 1px  ;
+    width: 110px;
+    text-align: center;
+    height: 50px;
+    
+}
+
+
+.account {
+   font-size: 11px;
+   margin-top: 5px;
+}
+
+.number {
+    margin-top: -15px;
+    font-weight: 600;
+}

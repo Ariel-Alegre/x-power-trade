@@ -1,0 +1,57 @@
+.orderInput {
+  display: grid;
+  margin-left: 20%;
+  margin-top: 20vh;
+  gap: 20px;
+}
+
+
+.LogoContainer {
+  float: right;
+  margin-top: -40px;
+  margin-right: -450px;
+}
+
+.LogoContainer img {
+  width: 100px;
+}
+
+.ImgContainer {
+  float: right;
+  margin-top: 150px;
+  margin-right: 150px;
+  box-shadow: 0px 0px 10px black;
+
+}
+
+.ImgContainer img {
+  width: 350px;
+}
+
+.orderInput input {
+  width: 40%;
+  height: 35px;
+  border-radius: 10px;
+ 
+}
+
+.orderInput p {
+  font-size: 12px;
+}
+
+.loginRedes{
+  margin-top: 10vh;
+  text-align: center;
+
+}
+
+.loginRedes a {
+  text-decoration: none;
+}
+
+.hr {
+  width: 400px;
+  margin-left: 15%;
+}
+
+
