@@ -54,6 +54,7 @@
   border: none;
   box-shadow: 0px 0px 1px;
   outline: none;
+  margin-bottom: 30px;
 }
 
 .EnterDeposit label {
@@ -63,9 +64,8 @@
   margin-top: -10px;
 }
 
-.input {
-  width: 4450px;
-}
+
+  w
 
 .EnterDeposit input::placeholder {
 }

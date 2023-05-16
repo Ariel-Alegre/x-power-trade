@@ -132,3 +132,45 @@
         border-color: rgb(1, 1, 58);
     }
 }
+
+@media (max-width: 768px) {
+    .ContactContainer {
+     display: flex;
+     flex-direction: column;
+
+     .NameEmail {
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+    }
+    
+    .NameEmail input {
+         width: 330px;
+
+     }
+
+     .Message {
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+
+     }
+
+     .Message textarea {
+        width: 330px;
+
+     }
+
+     .Text h6 {
+        margin-left: -50px;
+     }
+     
+     .Text h3 {
+        margin-left: -50px;
+     }
+     
+     .RequestSupport {
+        display: none;
+     }
+    }
+  }

@@ -23,7 +23,7 @@ const Accordion = styled((props) => (
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={
-      <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem", color: "#1976d2" }} />
+      <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem", color: "#1976d2", }}  />
     }
     {...props}
   />

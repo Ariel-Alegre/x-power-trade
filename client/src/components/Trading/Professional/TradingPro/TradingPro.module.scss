@@ -64,3 +64,25 @@
     font-size: 14px;
 
 }
+
+@media (max-width: 768px) {
+
+    .TextImage {
+        margin-left: 40px;
+    }
+
+    .Text h3 {
+        width: 330px;
+        font-size: 22px;
+    }
+
+    .Text p {
+        width: 330px;
+    }
+
+    .BtnContainer {
+        margin-top: 20px;
+    }
+
+
+}

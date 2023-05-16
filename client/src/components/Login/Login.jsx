@@ -13,7 +13,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginSuccess, loginError } from '../../Redux/action';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-import GoogleLogin from 'react-google-login';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -57,15 +56,7 @@ console.log(e);
           <img src={Logo} alt="Not found" />
           </a>
       </div>
-      <div>
-        <GoogleLogin
-    clientId="995759871583-n65ceorovh77fhnl34rv4sgu4ses1nog.apps.googleusercontent.com"
-    buttonText="Login"
-    onSuccess={responseGoogle}
-    onFailure={responseGoogle}
-    cookiePolicy={'single_host_origin'}
-  />
-      </div>
+
       <div className={styles.loginRedes}>
         <h1>Iniciar sesión</h1>
         <p>

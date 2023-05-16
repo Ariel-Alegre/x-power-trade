@@ -80,3 +80,44 @@
 .History {
     margin-top: 20px;
 }
+
+
+@media (max-width: 768px) {
+    .imgContainer {
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+    .imgContainer img {
+        height: 230px;
+        margin-bottom: 50px;
+    }
+
+    .Text {
+        margin-left: 25px;
+    }
+
+    .Text p {
+        width: 340px;
+    }
+.btnContainer {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.TextSecond {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.TextSecond p{
+    width: 350px;
+}
+
+.History {
+    margin-top: -75px;
+}
+
+   
+  
+}

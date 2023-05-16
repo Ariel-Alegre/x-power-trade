@@ -60,3 +60,18 @@
     font-size: 14px;
 
 }
+
+@media (max-width: 768px) {
+
+  .ProductsContainer {
+    margin-left: 20px;
+
+    .Text h3 {
+        width: 350px;
+    }
+    .Text p {
+        width: 345px;
+    }
+  }
+  
+}

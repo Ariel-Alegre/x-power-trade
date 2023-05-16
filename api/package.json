@@ -23,11 +23,13 @@
     "express-session": "^1.17.3",
     "firebase-admin": "^11.8.0",
     "google-auth-library": "^8.8.0",
+    "iyzipay": "^2.0.48",
     "jose": "^4.14.4",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^3.3.1",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
+    "paypal-rest-sdk": "^1.8.1",
     "sequelize": "^6.31.1",
     "sequelize-cli": "^6.6.0",
     "uuid": "^9.0.0"

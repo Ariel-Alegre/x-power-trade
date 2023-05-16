@@ -41,16 +41,18 @@
     gap: 20px;
 
 }
+
 .StepsCardsTrading {
     background-color: white;
-    box-shadow: 0px 0px 0px ,
-    0px 0px 10px rgb(193, 191, 191) ;
+    box-shadow: 0px 0px 0px,
+        0px 0px 10px rgb(193, 191, 191);
     width: 250px;
     height: 270px;
     display: grid;
     border-radius: 15px;
     justify-content: center;
 }
+
 .StepsCardsTrading h6 {
     color: #313131;
     font-family: "Poppins", Sans-serif;
@@ -66,10 +68,11 @@
     margin-left: 80px;
     margin-top: 50px;
 }
+
 .StepsCards {
     background-color: white;
-    box-shadow: 0px 0px 0px ,
-    0px 0px 10px rgb(193, 191, 191) ;
+    box-shadow: 0px 0px 0px,
+        0px 0px 10px rgb(193, 191, 191);
     width: 250px;
     height: 270px;
     justify-content: center;
@@ -97,4 +100,51 @@
 .linea {
     font-weight: bold;
     margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+
+    .TakeContainer {
+        margin-left: -50px;
+        height: 192vh;
+
+        .ImgContainer img {
+            width: 300px;
+        }
+
+        .Steps {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .StepsCards {
+            width: 300px;
+
+        }
+
+        .StepsCardsTrading {
+            width: 300px;
+        }
+
+
+
+        .StepsCardsTrading img {
+            margin-left: 120px;
+
+        }
+
+        .StepsCardsTrading h6 {
+            margin-left: 10px;
+
+        }
+
+        .linea {
+            display: none;
+        }
+
+
+    }
+
+
 }

@@ -39,3 +39,20 @@
     line-height: 18px;
     margin-top: 20px;
 }
+
+
+@media (max-width: 768px) {
+
+    .CarruselContainer {
+      width: 470px;
+      margin-left: -90px;
+      .img {
+        width: 350px;
+        height: 200px;
+      }
+
+      .Description {
+       display: none;
+      }
+    }
+}

@@ -34,3 +34,22 @@ color: #1F2649;
     font-size: 19px;
     font-weight: 600;
 }
+
+
+@media (max-width: 768px) {
+
+    .CheckContainer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+
+        .Bg {
+            width: 320px;
+        }
+
+        .Text {
+            font-size: 17px;
+        }
+    }
+  
+}

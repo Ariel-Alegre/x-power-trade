@@ -120,3 +120,28 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .AccordionContainer {
+      margin-left: 20px;
+
+
+      .BoxContainer strong{
+        width: 300px;
+
+      }
+
+      .BoxContainer p {
+        width: 300px;
+        margin-left: 32px;
+
+      }
+      .RequestSupport {
+       display: none;
+      }
+
+      .BoxContainer input {
+        width: 10px;
+      }
+    }
+  }

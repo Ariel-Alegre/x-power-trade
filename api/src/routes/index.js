@@ -3,6 +3,8 @@ const router = Router();
 const MarketsRouter = require('./EndPoint_Markets_Routers');
 const SearchRouter = require('./EndPoint_Markets_Routers');
 const UserRouter = require('./User_Router');
+const TransactionRouter = require('./Transaction_Router');
+
 
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
@@ -56,6 +58,8 @@ router.get(
 
 router.use('/markets', MarketsRouter, SearchRouter);
 router.use('/', UserRouter)
+router.use('/', TransactionRouter)
+
 
 
 

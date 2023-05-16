@@ -33,29 +33,27 @@
     }
 
 
-    
+
 }
 
 @media (max-width: 768px) {
     .InfoContainer {
-        flex-direction: column;
+        display: grid;
         margin-left: 20px;
         margin-right: 20px;
+
+        .Info {
+            margin-top: 60px;
+        }
+
+        .Info h1 {
+            margin-top: 30px;
+
+        }
+
+        .Info p {
+            font-size: 17px;
+        }
     }
 
-    .Info img {
-        position: static;
-        margin-bottom: 20px;
-    }
-
-    .Info p {
-        margin-left: 0;
-        width: auto;
-        text-align: center;
-    }
-
-    .Info h1 {
-        margin-left: 0;
-        text-align: center;
-    }
 }

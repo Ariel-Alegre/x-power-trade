@@ -1,142 +1,3 @@
-/* import { useState } from "react";
-import styles from "./Deposit.module.css";
-import { BiTransfer } from "react-icons/bi";
-import { ImPrinter } from "react-icons/im";
-import SideNavBar from "../SideNavBar/SideNavBar";
-import Identify from "../Identify/Identify";
-
-export default function Deposit() {
-  const [click, setClick] = useState(true);
-  const [clickAlternative, setClickAlternative] = useState(false);
-  const [clickTransfers, setClickTransfers] = useState(false);
-
-  const handleClickPayments = (e) => {
-    e.preventDefault();
-    setClickAlternative(false);
-    setClickTransfers(false);
-
-    setClick(true);
-  };
-
-  const handleClickAlternative = (e) => {
-    e.preventDefault();
-    setClick(false);
-    setClickTransfers(false);
-    setClickAlternative(true);
-  };
-
-  const handleClickTransfers = (e) => {
-    e.preventDefault();
-    setClickAlternative(false);
-    setClick(false);
-    setClickTransfers(true);
-  };
-  return (
-    <div>
-  
-      <div className={styles.DepositsContainer}>
-
-        <div className={styles.PaymentsAndTransfer}>
-          <button onClick={handleClickPayments}>
-            <BiTransfer className={styles.icons} />
-            Pagos online
-          </button>
-
-          <button onClick={handleClickAlternative}>
-            <BiTransfer className={styles.icons} />
-            Pagos alternativos
-          </button>
-
-          <button onClick={handleClickTransfers}>
-            <BiTransfer className={styles.icons} />
-            Tranferencia bancaria
-          </button>
-        </div>
-        {click ? (
-          <div className={styles.deposites}>
-            <h2>Deposite fondos en su cuenta</h2>
-            <p>Beneficiario: Ariel Alegre</p>
-            <div className={styles.EnterDeposit}>
-              <label>USD</label>
-              <input
-                placeholder="Introduzca la cantidad de depósito"
-                type="text"
-              />
-            </div>
-            <button className={styles.btn}>Continuar</button>
-          </div>
-        ) : undefined}
-        {clickAlternative && (
-          <div className={styles.alternative}>
-            <h2>
-              Seleccione su método de pago preferido y cargue fondos en su
-              cuenta
-            </h2>
-            <p>Beneficiario: Ariel Alegre</p>
-            <div className={styles.EnterDeposit}>
-              <label>USD</label>
-              <input
-                placeholder="Introduzca la cantidad de depósito"
-                type="text"
-              />
-            </div>
-            <button className={styles.btn}>Continuar</button>
-          </div>
-        )}
-
-        {clickTransfers && (
-          <div className={styles.Transfers}>
-            <h2>Depósito mediante transferencia bancaria</h2>
-            <div className={styles.Gap}>
-              <h5>
-                AB Mano Bankas{" "}
-                <button>
-                  <ImPrinter className={styles.buttonIcons} />
-                </button>
-              </h5>
-              <div className={styles.nameBank}>
-                <p>Nombre del banco:</p>
-                <b>AB Mano Bankas</b>
-              </div>
-              <div className={styles.BankAddress}>
-                <p>Dirección del banco:</p>
-                <b>S. Moniuskos str. 27, LT-o8115 Vilnius, Lithuania</b>
-              </div>
-              <div className={styles.Beneficiary}>
-                <p>Beneficiario:</p>
-                <b>BREINROCK LIMITED</b>
-              </div>
-              <div className={styles.BeneficiaryAddress}>
-                <p>Dirección Beneficiaria:</p>
-                <b>Address 1 Yong St 1801, Ontario Toronto, Canada</b>
-              </div>
-              <div className={styles.Swift}>
-                <p>SWIFT:</p>
-                <b>KUSRLT24</b>
-              </div>
-              <div className={styles.Reference}>
-                <p>Nombre de cuenta de referencia:</p>
-                <b>1303473995</b>
-              </div>
-
-              <div className={styles.select}>
-                <p>Divisa</p>
-                <p>IBAN</p>
-              </div>
-            </div>
-
-            <div className={styles.EurAndLt}>
-              <p>EUR</p>
-              <p>LT145030120000000439</p>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
- */
-
 import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
@@ -151,6 +12,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Identify from "../Identify/Identify";
 import SideNavBar from "../SideNavBar/SideNavBar";
 import AccountMenu from "../AccountMenu/AccountMenu";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -179,6 +42,9 @@ TabPanel.propTypes = {
 };
 
 function a11yProps(index) {
+
+
+  
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -186,6 +52,40 @@ function a11yProps(index) {
 }
 
 export default function Deposit() {
+
+
+
+  const [user, setUser] = useState({});
+
+  const token = useSelector((state) => state.token);
+  
+  console.log(user);
+
+  useEffect(() => {
+    
+    
+    fetch("http://localhost:3001/user", {
+      method: "GET",
+      headers: {
+        Authorization: `${token}`,
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error en la petición");
+      }
+      return response.json(); // Convertir la respuesta a formato JSON
+    })
+    .then((data) => {
+      setUser(data); // Asignar los datos del usuario al estado
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+    
+  }, [token]);
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -212,9 +112,8 @@ export default function Deposit() {
           <TabPanel value={value} index={0}>
             <div className={styles.deposites}>
               <h2>Deposite fondos en su cuenta</h2>
-              <p>Beneficiario: Ariel Alegre</p>
+              <p>Beneficiario: {user.name} {" "} {user.lastName}</p>
               <div className={styles.EnterDeposit}>
-                <label>USD</label>
 
                 <input
                   placeholder="Introduzca la cantidad de depósito"

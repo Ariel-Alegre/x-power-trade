@@ -6,7 +6,7 @@ function Tables() {
 
   return (
     <div  className={styles.TableContainer} responsive>
-      <thead className={styles.thead}>
+      <thead className={styles.thead} responsive>
         <tr>
           <th></th>
 

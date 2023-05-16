@@ -68,36 +68,26 @@
         border-color: rgb(1, 1, 58);
     }
 
+}
     /* Media Query para pantallas de 768px o menos */
     @media (max-width: 768px) {
-        margin-left: 20px;
-
-        .playImage {
-            width: 100%;
-            margin-top: 40px;
-        }
-
-        .iconPlay {
-            margin-left: -160px;
-            margin-top: 40px;
-        }
-
-        .textVideo {
+        .videoContainer {
             margin-left: 20px;
-            margin-top: -250px;
-        }
+            .playImage {
+                width: 350px;
+            }
+            .iconPlay {
+                margin-left: 145px;
+                margin-top: -260px;
+            }
 
-        .textVideo h3 {
-            font-size: 24px;
-        }
+            .textVideo {
+                margin-left: 20px;
+                margin-top: 10px;
+            }
 
-        .textVideo p {
-            width: 100%;
-        }
-
-        .btnExit {
-            float: none;
-            margin-left: 0;
+            .textVideo p {
+                width: 300px;
+            }
         }
     }
-}
