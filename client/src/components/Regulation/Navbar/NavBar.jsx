@@ -1,3 +1,7 @@
+
+
+
+
 import Buttons from "../Button/Button";
 import Logo from "../Logo/Logo";
 import styles from "./NavBar.module.scss";
@@ -5,12 +9,13 @@ import { AiOutlineDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
-
+  
   const [t, i18n] = useTranslation("global");
 
   return (
     <div className={styles.NavBarContainer}>
       <Logo />
+
       <div className={styles.select}>
         <ul>
         {t("NavBar.ABOUT")}
@@ -20,7 +25,7 @@ export default function NavBar() {
               <li>{t("NavBar.ABOUT_US")}</li>
               <hr />
             </a>
-            <a href="/about/why-ezinvest">
+            <a href="/about/why-xpowertrade">
               <li>{t("NavBar.WHY")}</li>
               <hr />
             </a>
@@ -100,6 +105,9 @@ export default function NavBar() {
         </ul>
       </div>
       <Buttons />
+
     </div>
   );
-}
+} 
+ 
+ 

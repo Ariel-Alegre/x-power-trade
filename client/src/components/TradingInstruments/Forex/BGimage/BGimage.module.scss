@@ -13,16 +13,16 @@
         text-align: center;
     }
 
-    .TextBg  h1 {
+    .TextBg h1 {
         color: white;
         font-family: "Poppins", Sans-serif;
         font-size: 48px;
         font-weight: 800;
         margin-top: 40px;
     }
-    
-    .TextBg  h3 {
-        color: #1976d2;  
+
+    .TextBg h3 {
+        color: #1976d2;
         font-family: "Poppins", Sans-serif;
         font-size: 18px;
         font-weight: 600;
@@ -30,4 +30,21 @@
         line-height: 24px;
         margin-top: 20px;
     }
+}
+
+@media screen and (max-width: 768px) {
+
+    .BgImageContainer {
+        width: 100%;
+
+        .TextBg h1 {
+     
+            font-size: 30px;
+   
+        }
+    
+    
+    }
+
+
 }

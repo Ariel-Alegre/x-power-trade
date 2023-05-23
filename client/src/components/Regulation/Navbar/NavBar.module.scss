@@ -58,6 +58,8 @@
 }
 
 
+
+
 .list a:hover {
     background-color: #1976d2;
 
@@ -88,27 +90,25 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
-    .NavBarContainer {
-        flex-wrap: wrap;
-    }
 
-    .NavBarContainer button {
-        margin: 10px 0;
-    }
-
-    .select {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-
-    .list {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .list a li {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
+   .toggle {
+ display: none;
+   }
 }

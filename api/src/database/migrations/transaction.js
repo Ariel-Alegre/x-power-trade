@@ -9,17 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      amount: {
-        type: Sequelize.FLOAT
-      },
-      currency: {
+      nombre: {
         type: Sequelize.STRING
       },
-      description: {
+      tarjeta: {
         type: Sequelize.STRING
       },
-      paymentStatus: {
-        type: Sequelize.STRING
+      monto: {
+        type: Sequelize.DECIMAL
       },
       createdAt: {
         allowNull: false,

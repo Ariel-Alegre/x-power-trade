@@ -26,6 +26,7 @@ import Stock from "./components/TradingInstruments/Stock/Stock";
 import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Personal from './components/Personal/Personal';
+import DocumentSection from '../src/components/Document/Document'
 
 
 function App({ isAuthenticated, token }) {
@@ -44,6 +45,8 @@ function App({ isAuthenticated, token }) {
             <Route exact path="/account-support" element={<Support />} />
             <Route exact path="/platforms" element={<Platforms />} />
             <Route exact path="/account-settings" element={<Personal />} />
+            <Route exact path="/kyc-upload" element={<DocumentSection />} />
+
 
             
             <Route exact path="/" element={<Home />} />
@@ -51,7 +54,7 @@ function App({ isAuthenticated, token }) {
             <Route exact path="/regulation/policies" element={<Policies />} />
             <Route exact path="/regulation/legal-information" element={<Legal />} />
             <Route exact path="/about/about-us" element={<AboutUs />} />
-            <Route exact path="/about/why-ezinvest" element={<Ezinvest />} />
+            <Route exact path="/about/why-xpowertrade" element={<Ezinvest />} />
             <Route exact path="/about/contact-us" element={<ContactUs />} />
             <Route exact path="/about/faq" element={<Faq />} />
             <Route exact path="/about/faq/deposits-withdrawals" element={<LoadMoreDeposit />} />

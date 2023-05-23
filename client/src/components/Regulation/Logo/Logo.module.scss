@@ -29,3 +29,35 @@
     color: black;
     font-weight: 400;
   }
+
+  @media only screen and (max-width: 768px) {
+    .LogoContainer {
+      margin-top: -20px;
+   
+     margin-left: 5px;
+    }
+    
+    
+    
+    .LogoContainer img {
+      width: 30px;
+      margin-top: -10px;
+    }
+    .LogoContainer a {
+    display: flex;
+    gap: 4px;
+
+  }
+  .x {
+    font-size: 12px;
+  }
+  .power {
+    font-size: 12px;
+  }
+  .trade {
+    font-size: 12px;
+  }
+
+
+    
+  }

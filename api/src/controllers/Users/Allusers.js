@@ -1,13 +1,17 @@
 require('dotenv').config();
+const bcrypt = require('bcrypt');
+const { jwtVerify } = require("jose");
 const { User_Register } = require('../../database/models');
 
 module.exports = {
 
-  AllUsers: async (req, res) => {
-    try {
-    const allUsers = await User_Register.findAll()
+  AllUser: async (req, res) => {
 
-    res.status(200).send(allUsers)
+  
+    try {
+    const allUser = await User_Register.findAll()
+    res.status(200).send(allUser)
+     
 
     } catch (error) {
       console.error(error);

@@ -14,10 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Transaction.init({
-    amount: DataTypes.FLOAT,
-    currency: DataTypes.STRING,
-    description: DataTypes.STRING,
-    paymentStatus: DataTypes.STRING
+    nombre: DataTypes.STRING,
+    tarjeta: DataTypes.STRING,
+    monto: DataTypes.DECIMAL
   }, {
     sequelize,
     modelName: 'Transaction',

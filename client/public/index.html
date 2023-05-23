@@ -25,7 +25,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>X POWER TRADE</title>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script 
+    src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js" 
+    kr-public-key="89289758:testpublickey_TxzPjl9xKlhM0a6tfSVNilcLTOUZ0ndsTogGTByPUATcE" 
+    kr-post-url-success="paid.html">
+   </script>
+ 
+   <!-- theme and plugins. should be loaded after the javascript library -->
+   <!-- not mandatory but helps to have a nice payment form out of the box -->
+   <link rel="stylesheet" 
+   href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic-reset.css">
+  <script 
+   src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js">
+  </script> 
   </head>
   <body>
     <div id="root"></div>
@@ -41,7 +53,7 @@
       -->
     </body>
     <body>
-    <div id="auth"></div>
+
     
   </body>
 </html>

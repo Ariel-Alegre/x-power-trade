@@ -28,7 +28,7 @@ export default function Buttons() {
           </div>
           <div className={styles.btnSignUp}>
             <a href="/auth/register">
-              <button >Registrarse</button>
+              <button>Registrarse</button>
             </a>
           </div>
         </div>

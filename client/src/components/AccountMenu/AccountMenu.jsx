@@ -112,9 +112,12 @@ export default function AccountMenu() {
           transformOrigin={{ horizontal: "right", vertical: "top" }}
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
+          <a href="/kyc-upload">
+
           <MenuItem onClick={handleClose}>
             <Avatar /> Subir documentos
           </MenuItem>
+          </a>
           <MenuItem onClick={handleClose}>
           <a href={"/account-settings/"}>
             <ListItemIcon>

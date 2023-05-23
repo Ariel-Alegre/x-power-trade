@@ -57,4 +57,31 @@ export const detailUser = (typeData) => {
         })
 
     }
-}
+};
+
+
+export const allUser = () => {
+    return async(dispatch) => {
+        const res = await axios.get('http://localhost:3001/users');
+        const data = await res.data;
+
+        return dispatch({
+            type: "ALL_USERS",
+            payload: data
+        })
+    }
+};
+
+
+export const uploadDocument = (document) => {
+    return async(dispatch) => {
+        const res = await axios.post('http://localhost:3001/upload', document);
+        const data = await res.data;
+
+        return dispatch({
+            type: "DOCUMENT",
+            payload: data
+        })
+    }
+};
+

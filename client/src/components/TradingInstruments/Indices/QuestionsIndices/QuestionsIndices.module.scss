@@ -22,3 +22,18 @@
       
       
   }
+
+  @media screen and (max-width: 768px) {
+    .AccordionContainer {
+      margin-left: 20px;
+      margin-top: -50px;
+    }
+  
+    .BoxAccordion p {
+      width: 330px;
+    }
+  
+    .BoxAccordion strong {
+      width: 330px;
+    }
+  }

@@ -65,7 +65,34 @@
 
 .BtnContainer button:hover {
     background-color: #1976d2;
-    color:  rgb(1, 1, 58);;
+    color: rgb(1, 1, 58);
+    ;
     box-shadow: 0px 0px 4px black;
     border-color: rgb(1, 1, 58);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .TextImage {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .Text {
+            margin-top: -50px;
+            margin-bottom: 130px;
+        }
+
+        .Text p {
+            width: 350px;
+
+        }
+
+        .ImgContainer img {
+            width: 350px;
+        }
+
+    }
+
 }

@@ -1,40 +1,44 @@
 .footerContainer {
-    background-color: #2E2E2E;
-    height: 100VH;
+
 
     .logoAndRedes img {
         width: 230px;
-       
+
     }
+
     .logoAndRedes p {
-       color: white; 
-       margin-top: 20px;
+        color: black;
+        margin-top: 20px;
     }
-    
+
     .logoAndRedes {
         margin-top: -260px;
         margin-left: 60px;
+        display: none;
     }
+
     .redes {
-        display: flex;
+        display: none;
         gap: 20px;
         margin-top: 20px;
     }
-    
+
     .icons {
-        color: white;
+        color: black;
     }
-    .secciones{
-        display: flex;
+
+    .secciones {
+        display: none;
         gap: 80px;
         margin-left: 22%;
         width: 300px;
     }
+
     .secciones h4 {
-        color: white;
+        color: black;
         font-weight: 700;
         margin-top: 80px;
-        
+
     }
 
     .About {
@@ -43,13 +47,15 @@
         display: grid;
     }
 
-    .About a{
-        color: white;
+    .About a {
+        color: black;
         text-decoration: none;
     }
+
     .hr {
         margin-top: 2px;
     }
+
     .Trading {
         margin-top: 130px;
         margin-left: -183px;
@@ -57,21 +63,20 @@
     }
 
     .Trading a {
-        color: white;
+        color: black;
         text-decoration: none;
     }
 
-    .hrLong{
+    .hrLong {
         width: 100%;
         height: 2px;
-        background: white;
-        opacity: 0.8;
+        background: black;
         margin-top: 120px;
     }
 
     .data {
-        color: white;
-        display: grid;
+        color: black;
+        display: none;
         float: right;
         margin-top: -210px;
         background-color: #2E2E2E;
@@ -81,16 +86,16 @@
         padding: 30px 15px 20px 15px;
         border-style: solid;
         margin-right: 50px;
-        
+
     }
 
-    .data label{
+    .data label {
         width: 400px;
-       
+
     }
 
     .text {
-        color: white;
+        color: black;
         font-size: 13px;
         margin-left: 80px;
         margin-right: 80px;
@@ -105,51 +110,48 @@
     .hrEnd {
         width: 80%;
         height: 2px;
-        background: white;
+        background: black;
         opacity: 0.8;
         margin-top: 45px;
         margin-left: 120px;
     }
-    .reserved  {
+
+    .reserved {
         display: flex;
-        color: white;
+        color: black;
         justify-content: center;
         font-size: 13px;
         margin-top: 30px;
         gap: 5px;
+        margin-bottom: 50px;
     }
 
     .reserved p {
         opacity: 0.7;
-    }  
-    
+    }
 
-    .reserved  label {
+
+    .reserved label {
         color: #1976d2;
     }
 
-    .logoAndRedes img{
+    .logoAndRedes img {
         width: 150px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .footerContainer {
-      padding: 40px;
+    .hrLong {
+        margin-left: 5px;
+        margin-top: -150px;
+        height: 0.1rem;
     }
-  
-    .logoAndRedes {
-      margin-top: 20px;
-      margin-left: 0;
-      text-align: center;
+
+    .hrEnd {
+        display: none;
     }
-  
-    .secciones {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-left: 0;
-      margin-top: [valor deseado];
+
+    .reserved {
+        margin-bottom: 50px;
     }
-  }
-  
+}

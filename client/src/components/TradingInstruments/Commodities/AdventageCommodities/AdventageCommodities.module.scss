@@ -51,3 +51,26 @@
     }
     
 }
+
+@media screen and (max-width: 768px) {
+    .Advantages {
+
+        .Text {
+            margin-left: 20px;
+        }
+
+        .Text h6 {
+            font-size: 25px;
+        }
+
+        .Text h3 {
+            font-size: 25px;
+
+        }
+
+        .IconsContainer {
+            display: grid;
+        }
+
+    }
+}

@@ -53,3 +53,35 @@
   color: white;
   background-color: #1976d2;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .btnContainer {
+    display: flex;
+    margin-top: -36px;
+  }
+
+  .btnSignUp a button  {
+    border: none;
+    width: 1px;
+  }
+
+  .btnSignUp a button:hover {
+    color: #1976d2;
+    background-color: transparent;
+  }
+  
+
+
+.btnLogin a {
+  margin-left: 0px;
+  margin-top: 5px;
+  position: absolute;
+
+}
+
+
+
+  
+}

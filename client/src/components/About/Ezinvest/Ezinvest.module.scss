@@ -5,7 +5,7 @@
     margin-top: 20px;
 
     .TitlesEzivenvest {
-       text-align: center;
+        text-align: center;
     }
 
     .TitlesEzivenvest h1 {
@@ -95,4 +95,30 @@
     color: white;
     box-shadow: 0px 0px 4px black;
     border-color: #1F2649;
+}
+
+
+@media (max-width: 768px) {
+    .TextImage {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+    }
+
+    .ImgContainer img{
+        width: 350px;
+
+    }
+
+    .Text {
+        margin-top: -60px;
+    }
+
+    .Text p {
+        width: 330px;
+    }
+
+    .BtnContainer {
+        margin-top: 10px;
+    }
 }

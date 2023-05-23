@@ -20,49 +20,49 @@ export default function Advantages() {
         <div>
           <img src={icons1} alt="Not found" />
           <p>
-          HAGA TRADING CON MÁS DE
-          <br />
-          190 PARES DE DIVISAS
+            HAGA TRADING CON MÁS DE
+            <br />
+            190 PARES DE DIVISAS
           </p>
         </div>
         <div>
           <img src={icons2} alt="Not found" />
           <p>
-          HERRAMIENTAS DE TRADING
-          <br />
-          DE FOREX DE ALTA
-          <br />
-          TECNOLOGÍA
+            HERRAMIENTAS DE TRADING
+            <br />
+            DE FOREX DE ALTA
+            <br />
+            TECNOLOGÍA
           </p>
         </div>
         <div>
           <img src={icons3} alt="Not found" />
           <p>
-          BENEFICIOS FLEXIBLES DE
-          <br />
-          TRADING
+            BENEFICIOS FLEXIBLES DE
+            <br />
+            TRADING
           </p>
         </div>
         <div>
           <img src={icons4} alt="Not found" />
           <p>
-          ATENCIÓN AL CLIENTE
-          <br />
-          PROFESIONAL LAS 24 HORAS
-          <br />
-          DEL DÍA Y 5 DÍAS DE LA
-          <br />
-          SEMANA
+            ATENCIÓN AL CLIENTE
+            <br />
+            PROFESIONAL LAS 24 HORAS
+            <br />
+            DEL DÍA Y 5 DÍAS DE LA
+            <br />
+            SEMANA
           </p>
         </div>
         <div>
           <img src={icons5} alt="Not found" />
           <p>
-          HAGA TRADING CON UN
-          <br />
-          BRÓKER REGLAMENTADO Y
-          <br />
-          CON LICENCIA GLOBAL
+            HAGA TRADING CON UN
+            <br />
+            BRÓKER REGLAMENTADO Y
+            <br />
+            CON LICENCIA GLOBAL
           </p>
         </div>
       </div>

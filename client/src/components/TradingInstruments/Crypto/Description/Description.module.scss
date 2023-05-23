@@ -94,3 +94,27 @@
     color: black;
 }
 
+
+@media screen and (max-width: 768px) {
+    .TextImage {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+    }
+
+   .Text {
+       margin-top: -50px;
+   }
+
+   .Text p {
+       width: 350px;
+   }
+
+    .ImgContainer img {
+       width: 330px;
+    }
+
+    .BtnContainer {
+       margin-top: 30px;
+    }
+}

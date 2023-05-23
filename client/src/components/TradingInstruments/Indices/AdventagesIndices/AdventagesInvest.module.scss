@@ -4,6 +4,7 @@
     .Text {
         margin-left: 70px;
     }
+
     .Text h6 {
         font-family: "Poppins", Sans-serif;
         font-size: 18px;
@@ -11,6 +12,7 @@
         line-height: 24px;
         color: #1976d2;
     }
+
     .Text h3 {
         color: #1F2649;
         font-family: "Poppins", Sans-serif;
@@ -26,8 +28,9 @@
     }
 
     .marca1 {
-        color:black
+        color: black
     }
+
     .marca2 {
         font-weight: 500;
         color: black;
@@ -49,5 +52,18 @@
         margin-top: 20px;
 
     }
-    
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .Advantages {
+
+  margin-top: -70px;
+
+        .IconsContainer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }

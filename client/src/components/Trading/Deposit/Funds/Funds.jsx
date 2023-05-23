@@ -5,9 +5,6 @@ import Skrill from "../../../../image/skrill-1.png";
 import Other from "../../../../image/other-payment-methods.png";
 import { useTranslation } from "react-i18next";
 
-
-
-
 export default function Funds() {
   const [t, i18n] = useTranslation("global");
 
@@ -15,9 +12,7 @@ export default function Funds() {
     <div className={styles.FundsContainer}>
       <div className={styles.TextContainer}>
         <h3>{t("Deposit_withdrawal.FundsTittle")}</h3>
-        <p>
-        {t("Deposit_withdrawal.DataFunds")}
-        </p>
+        <p>{t("Deposit_withdrawal.DataFunds")}</p>
       </div>
       <div className={styles.PaymentContainer}>
         <div className={styles.ImgContainer}>
@@ -27,50 +22,9 @@ export default function Funds() {
           <h3> {t("Deposit_withdrawal.PaymentTittle1")}</h3>
           <p> {t("Deposit_withdrawal.DataPayment1")}.</p>
           <div className={styles.BtnContainer}>
-            <button> 
-              <span>
-
-              {t("Deposit_withdrawal.Button")}
-              </span>
-              </button>
-          </div>
-        </div>
-      </div>
-      <div className={styles.PaymentContainer}>
-        <div className={styles.ImgContainer}>
-          <img src={Wire} alt="Not found" />
-        </div>
-        <div className={styles.PaymentText}>
-          <h3>{t("Deposit_withdrawal.PaymentTittle2")}</h3>
-          <p>{t("Deposit_withdrawal.DataPayment2")}</p>
-          <div className={styles.BtnContainer}>
-            <button>{t("Deposit_withdrawal.Button")}</button>
-          </div>
-        </div>
-      </div>
-      <div className={styles.PaymentContainer}>
-        <div className={styles.ImgContainer}>
-          <img src={Skrill} alt="Not found" />
-        </div>
-        <div className={styles.PaymentText}>
-          <h3>{t("Deposit_withdrawal.PaymentTittle3")}</h3>
-          <h3>{t("Deposit_withdrawal.PaymentTittle31")}</h3>
-
-          <p>{t("Deposit_withdrawal.DataPayment3")}</p>
-          <div className={styles.BtnContainer}>
-            <button>{t("Deposit_withdrawal.Button")}</button>
-          </div>
-        </div>
-      </div>
-      <div className={styles.PaymentContainer}>
-        <div className={styles.ImgContainer}>
-          <img src={Other} alt="Not found" />
-        </div>
-        <div className={styles.PaymentText}>
-          <h3>{t("Deposit_withdrawal.PaymentTittle4")}</h3>
-          <p>{t("Deposit_withdrawal.DataPayment4")}</p>
-          <div className={styles.BtnContainer}>
-            <button>{t("Deposit_withdrawal.Button")}</button>
+            <button>
+              <span>{t("Deposit_withdrawal.Button")}</span>
+            </button>
           </div>
         </div>
       </div>
