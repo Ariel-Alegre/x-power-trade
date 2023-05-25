@@ -3,13 +3,44 @@ import styles from "./Contact.module.scss";
 import Button from "react-bootstrap/Button";
 import { useTranslation } from "react-i18next";
 import Form from "react-bootstrap/Form";
+import  { useRef,  useState} from 'react';
+import emailjs from '@emailjs/browser';
+import Modal from 'react-bootstrap/Modal';
+import swal from 'sweetalert' 
 
 export default function Contact() {
   const [t, i18n] = useTranslation("global");
 
+  const form = useRef();
+
+
+  
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+   // swal("Mensaje enviado", "X POWER TRADE", "success");
+    swal({
+      title: "Mensaje enviado",
+      text: "Gracias por comunicarte con X POWER TRADE",
+      icon: "success",
+      button: "Aww yiss!",
+    });
+    
+    emailjs.sendForm('service_jm4kx3h', 'template_zfq1dtg', form.current, 'rnwxETCxjybwiNYLO')
+    .then((result) => {
+      console.log(result.text);
+    }, (error) => {
+      console.log(error.text);
+  });
+      
+
+
+
+  };
+
   return (
     <div className={styles.ContactContainer}>
-      <Form className={styles.InputContainer}>
+      <Form className={styles.InputContainer} ref={form} onSubmit={sendEmail}>
         <div className={styles.Text}>
           <h6>{t("Contact_Us.Contact_Us")}</h6>
           <h3>{t("Contact_Us.Write")}</h3>
@@ -17,21 +48,21 @@ export default function Contact() {
         <div className={styles.NameEmail}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>{t("Contact_Us.Name")}</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" name="user_name" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>{t("Contact_Us.Email")}</Form.Label>
-            <Form.Control type="email" />
+            <Form.Control type="email" name="user_email" required />
           </Form.Group>
         </div>
         <div className={styles.Message}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>{t("Contact_Us.Message")}</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" rows={3} name="message" required />
           </Form.Group>
         </div>
         <div className={styles.CheckBox}>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" id="" required />
           <label htmlFor="">
             {t("Contact_Us.You_accept")}{" "}
             <a href="/regulation/policies">{t("Contact_Us.Terms")}</a>{" "}
@@ -41,9 +72,10 @@ export default function Contact() {
         </div>
 
         <div className={styles.BtnContainer}>
-          <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" >
             {t("Contact_Us.Button")}
           </Button>
+          
         </div>
       </Form>
       <div className={styles.RequestSupport}>
