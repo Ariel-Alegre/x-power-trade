@@ -23,7 +23,7 @@ export default function Contact() {
       title: "Mensaje enviado",
       text: "Gracias por comunicarte con X POWER TRADE",
       icon: "success",
-      button: "Aww yiss!",
+      button: "Cerrar",
     });
     
     emailjs.sendForm('service_jm4kx3h', 'template_zfq1dtg', form.current, 'rnwxETCxjybwiNYLO')
