@@ -1,13 +1,31 @@
 import styles from "./Legal.module.scss";
-import Button from "../Button/Button";
 import NavBar from "../Navbar/NavBar";
 import Footer from "../../Footer/Footer";
 import Image from "../../Regulation/Image/ImageRegulation";
+import { useEffect, useState } from 'react';
+import Logos from '../../../Logos/logo-1.png';
 
 export default function Legal() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulación de una tarea asíncrona
+    setTimeout(() => {
+      setIsLoading(false); // Cambiar el estado a "false" después de cierto tiempo
+    }, 2000); // Esperar 2 segundos antes de cambiar el estado
+  }, []);
   return (
     <div>
-      <NavBar />
+          {isLoading ? (
+           <div className={styles.loading_container}>
+           <img src={Logos} alt="Cargando..." />
+           <div className={styles.loading_overlay}></div>
+         </div>
+      ) : (
+<div>
+
+        <NavBar />
       <Image />
       <div className={styles.LegalContainer}>
         <h3>Legal Information</h3>
@@ -35,6 +53,9 @@ export default function Legal() {
         </div>
       </div>
       <Footer />
+
+      </div>
+      )}
     </div>
   );
 }

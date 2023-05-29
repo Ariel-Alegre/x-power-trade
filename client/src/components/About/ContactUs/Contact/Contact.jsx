@@ -3,9 +3,8 @@ import styles from "./Contact.module.scss";
 import Button from "react-bootstrap/Button";
 import { useTranslation } from "react-i18next";
 import Form from "react-bootstrap/Form";
-import  { useRef,  useState} from 'react';
+import  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Modal from 'react-bootstrap/Modal';
 import swal from 'sweetalert' 
 
 export default function Contact() {

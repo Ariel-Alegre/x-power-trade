@@ -61,7 +61,7 @@ export const detailUser = (typeData) => {
 
 
 export const allUser = () => {
-    return async(dispatch) => {
+    return async (dispatch) => {
         const res = await axios.get('http://localhost:3001/users');
         const data = await res.data;
 
@@ -74,7 +74,7 @@ export const allUser = () => {
 
 
 export const uploadDocument = (document) => {
-    return async(dispatch) => {
+    return async (dispatch) => {
         const res = await axios.post('http://localhost:3001/upload', document);
         const data = await res.data;
 
@@ -82,6 +82,13 @@ export const uploadDocument = (document) => {
             type: "DOCUMENT",
             payload: data
         })
+    }
+};
+
+export const clean = () => {
+    return {
+        type: 'CLEAN',
+        payload: []
     }
 };
 

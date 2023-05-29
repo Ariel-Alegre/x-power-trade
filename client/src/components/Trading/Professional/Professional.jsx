@@ -5,19 +5,38 @@ import BGImage from "./BGImage/BGImage";
 import Check from "./Check/Check";
 import TakeALook from "./TakeALook/TakeALook";
 import TradingPro from "./TradingPro/TradingPro";
+import { useEffect, useState } from "react";
+import Logos from '../../../Logos/logo-1.png';
+import styles from './Professional.module.scss'
 
 export default function Professional() {
-    return (
-        <div>
-            <NavBar/>
-            <BGImage/>
-            <div>
-                <TradingPro/>
-                <TakeALook/>
-                <Check/>
-            </div>
+  const [isLoading, setIsLoading] = useState(true);
 
-            <Footer/>
+  useEffect(() => {
+    // Simulación de una tarea asíncrona
+    setTimeout(() => {
+      setIsLoading(false); // Cambiar el estado a "false" después de cierto tiempo
+    }, 2000); // Esperar 2 segundos antes de cambiar el estado
+  }, []);
+  return (
+    <div>
+      {isLoading ? (
+             <div className={styles.loading_container}>
+             <img src={Logos} alt="Cargando..." />
+             <div className={styles.loading_overlay}></div>
+           </div>
+      ) : (
+        <div>
+          <NavBar />
+          <BGImage />
+          <div>
+            <TradingPro />
+            <TakeALook />
+            <Check />
+          </div>
+          <Footer />
         </div>
-    )
+      )}
+    </div>
+  );
 }

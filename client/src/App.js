@@ -26,10 +26,11 @@ import Stock from "./components/TradingInstruments/Stock/Stock";
 import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Personal from './components/Personal/Personal';
-import DocumentSection from '../src/components/Document/Document'
+import DocumentSection from '../src/components/Document/Document';
 
 
 function App({ isAuthenticated, token }) {
+
   return (
     <div>
    
