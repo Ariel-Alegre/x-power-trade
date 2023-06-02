@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { useSelector } from "react-redux";
 import styles from "./Personal.module.scss";
 import Identify from "../Identify/Identify";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import { useEffect, useState } from "react";
 
@@ -45,7 +45,7 @@ export default function Personal() {
     
     return (
       <div>
-        <SideNavBar/>
+        <SideBar/>
         <Identify/>
         <AccountMenu/>
       <h1 className={styles.h1}>Informacion personal</h1>

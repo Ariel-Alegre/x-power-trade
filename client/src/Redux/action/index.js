@@ -60,7 +60,7 @@ export const detailUser = (typeData) => {
 };
 
 
-export const allUser = () => {
+/* export const allUser = () => {
     return async (dispatch) => {
         const res = await axios.get('http://localhost:3001/users');
         const data = await res.data;
@@ -71,7 +71,7 @@ export const allUser = () => {
         })
     }
 };
-
+ */
 
 export const uploadDocument = (document) => {
     return async (dispatch) => {

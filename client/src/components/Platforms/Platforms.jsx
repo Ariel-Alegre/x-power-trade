@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Platforms.module.scss";
 import Identify from '../Identify/Identify';
-import SideNavBar from '../SideNavBar/SideNavBar'
+import SideBar from '../Sidebar/index';
 import { Markets } from '../../Redux/action/index'
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -15,7 +15,7 @@ const Platforms = () => {
 
   return (
     <div>
-      <SideNavBar/>
+      <SideBar/>
       <Identify/>
       <table>
         <thead>

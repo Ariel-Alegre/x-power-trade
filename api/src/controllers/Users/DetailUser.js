@@ -1,8 +1,24 @@
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 const { jwtVerify } = require("jose");
-const { User_Register } = require('../../database/models');
+const crypto = require('crypto');
+const algorithm = 'aes-192-cbc';
+const key = '111111111111111111111111' // hard code
+const iv = '2222222222222222'// Vector de inicialización aleatorio (16 bytes)
 
+function encryptToken(token) {
+  const cipher = crypto.createCipheriv(algorithm, key, iv);
+  let encryptedToken = cipher.update(token, 'utf8', 'hex');
+  encryptedToken += cipher.final('hex');
+  return encryptedToken;
+}
+
+function decryptToken(encryptedToken) {
+  const decipher = crypto.createDecipheriv(algorithm, key, iv);
+  let decryptedToken = decipher.update(encryptedToken, 'hex', 'utf8');
+  decryptedToken += decipher.final('utf8');
+  return decryptedToken;
+}
 module.exports = {
 
   DetailUser: async (req, res) => {
@@ -11,17 +27,14 @@ module.exports = {
     if (!authorization) return res.sendStatus(401);
   
     try {
+
+      const descrypt = decryptToken(authorization)
       const encoder = new TextEncoder();
       const { payload } = await jwtVerify(
-        authorization,
+        descrypt,
         encoder.encode('asfdafsdsdfasdfasdf')
       );
       
-   /*    const user = await User_Register.forEach((user) => user.id === payload.id) */
-  
-    /*   if (!user) return res.sendStatus(401);
-  
-      delete user.password; */
   
       return res.send(payload);
      

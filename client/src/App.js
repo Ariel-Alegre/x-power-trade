@@ -27,7 +27,7 @@ import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Personal from './components/Personal/Personal';
 import DocumentSection from '../src/components/Document/Document';
-
+import Test from './components/Test'
 
 function App({ isAuthenticated, token }) {
 
@@ -37,6 +37,8 @@ function App({ isAuthenticated, token }) {
       <div>
         <BrowserRouter>
           <Routes>
+          <Route exact path="/test" element={<Test />} />
+
           <Route exact path="/auth/register" element={<Register />} />
 
             <Route exact path="/auth/login" element={<Login />} />

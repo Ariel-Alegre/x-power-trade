@@ -10,7 +10,7 @@ import { ImPrinter } from "react-icons/im";
 import Button from "@mui/material/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import Identify from "../Identify/Identify";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -85,7 +85,7 @@ export default function Deposit() {
 
   return (
     <div>
-      <SideNavBar />
+      <SideBar />
       <Identify />
       <AccountMenu />
       <div className={styles.DepositsContainer}>

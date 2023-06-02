@@ -7,7 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import Identify from '../Identify/Identify'
 import AccountMenu from "../AccountMenu/AccountMenu";
 
@@ -45,7 +45,7 @@ export default function Support() {
 
   return (
     <div>
-      <SideNavBar/>
+      <SideBar/>
       <Identify/>
       <AccountMenu/>
      

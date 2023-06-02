@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Image } from "react-bootstrap";
 import styles from "./Document.module.scss";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import Identify from "../Identify/Identify";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import Button from "@mui/material/Button";
 
 
@@ -24,7 +24,7 @@ const UploadDocument = () => {
 
   return (
     <div>
-      <SideNavBar />
+      <SideBar />
       <Identify />
       <AccountMenu />
       <Container className={`my-5 ${styles.DocumentContainer}`}>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Withdraw.module.scss";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import Identify from "../Identify/Identify";
 import AccountMenu from "../AccountMenu/AccountMenu";
 
@@ -9,7 +9,7 @@ export default function Withdraw() {
 
   return (
     <div>
-   <SideNavBar/>
+   <SideBar/>
        <Identify/>
        <AccountMenu/>
       <div className={styles.withdrawContainer}>

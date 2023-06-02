@@ -4,21 +4,19 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Logo from "../../Logos/logo-1.png";
-import { useState, useEffect  } from "react";
+import { useState, useEffect } from "react";
 import Image from "../../image/image-video.jpg";
 import { Register } from "../../Redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { allUser } from '../../Redux/action';
-import Alert from '@mui/material/Alert';
-
+import { allUser } from "../../Redux/action";
+import Alert from "@mui/material/Alert";
 
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const check = useSelector(state => state.CheckEmail);
+  const check = useSelector((state) => state.CheckEmail);
 
-  console.log(check);
   const [errors, setErrors] = useState({});
   const [user, setUser] = useState({
     name: "",
@@ -37,42 +35,22 @@ export default function Login() {
     let errores = {};
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-    if (!emailRegex.test(input.email)) {
-      errores.email = 'El correo electrónico es válido'
-  } 
-  const verify =  check.filter(data => data.email === user.email)
-  if (verify) {
 
-    errores.email = "El email ya existe"
-    
-  }
+    if (!emailRegex.test(input.email)) {
+      errores.email = "El correo electrónico es válido";
+    }
+    const verify = check.filter((data) => data.email === user.email);
+    if (verify) {
+      errores.email = "El email ya existe";
+    }
     return errores;
   };
 
-
-  useEffect(() => {
-    dispatch(allUser())
-  }, [dispatch]);
-
-    
-    
-
-  const handleSubmit =  async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const verify = await check.filter(data => data.email === user.email)
 
-
- if (verify) {
-  alert('ya existe este usuario')
-  
- } else {
-
-   dispatch(Register(user));
-   navigate("/auth/login");
-  }
-
-
+    dispatch(Register(user));
+    navigate("/auth/login");
   };
 
   const handleChange = (e) => {
@@ -82,7 +60,8 @@ export default function Login() {
       validate({
         ...user,
         [e.target.name]: [e.target.value],
-      }))
+      })
+    );
   };
 
   return (
@@ -171,10 +150,10 @@ export default function Login() {
                 },
               }}
             />
-              {errors.email && (
+            {/*       {errors.email && (
                <p className={styles.error}>{errors.email}</p>
              )
-             }
+             } */}
           </div>
           <div className={styles.data}>
             <label htmlFor="">Contraseña</label>

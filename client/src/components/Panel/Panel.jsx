@@ -1,14 +1,14 @@
 import image from "../../image/Trading-1.jpg";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import Identify from "../Identify/Identify";
-import SideNavBar from "../SideNavBar/SideNavBar";
+import SideBar from "../Sidebar/index";
 import styles from "./Panel.module.css";
 import Button from "@mui/material/Button";
 
 export default function Panel() {
   return (
     <div>
-      <SideNavBar/>  
+      <SideBar/>  
       <Identify/>
       <AccountMenu/>
       <div className={styles.panelContainer}>
