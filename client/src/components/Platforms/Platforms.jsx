@@ -41,7 +41,7 @@ export default function TradingViewWidget() {
       ) {
         new window.TradingView.widget({
           width: 980,
-          height: 610,
+          height: 500,
           symbol: "BITSTAMP:BTCUSDT",
           timezone: "Etc/UTC",
           theme: "light",
