@@ -60,9 +60,9 @@ export const detailUser = (typeData) => {
 };
 
 
-/* export const allUser = () => {
+export const allUser = () => {
     return async (dispatch) => {
-        const res = await axios.get('http://localhost:3001/users');
+        const res = await axios.get('http://localhost:3001/admin/user');
         const data = await res.data;
 
         return dispatch({
@@ -71,7 +71,19 @@ export const detailUser = (typeData) => {
         })
     }
 };
- */
+
+export const detailsUser = (UserId) => {
+    return async (dispatch) => {
+        const res = await axios.get(`http://localhost:3001/admin/user/${UserId}`);
+        const data = await res.data;
+
+        return dispatch({
+            type: "USER_DETAILS",
+            payload: data
+        })
+    }
+};
+
 
 export const uploadDocument = (document) => {
     return async (dispatch) => {

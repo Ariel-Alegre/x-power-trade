@@ -27,7 +27,17 @@ import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Personal from './components/Personal/Personal';
 import DocumentSection from '../src/components/Document/Document';
-import Test from './components/Test'
+import Test from './components/Test';
+import HomeAdmin from './AdminPage/pages/home/HomeAdmin';
+import LoginAdmin from './AdminPage/pages/login/LoginAdmin';
+import List from './AdminPage/pages/list/List';
+import Single from './AdminPage/pages/single/Single';
+import New from './AdminPage/pages/new/New';
+import Users from "./AdminPage/pages/list/List";
+import DetailsUsers from "./AdminPage/pages/detailsUsers/DetailsUsers";
+
+
+
 
 function App({ isAuthenticated, token }) {
 
@@ -36,7 +46,14 @@ function App({ isAuthenticated, token }) {
    
       <div>
         <BrowserRouter>
-          <Routes>
+        <Routes>
+        <Route path="/admin">
+            <Route index element={<HomeAdmin />} />
+              <Route path="user/:UserId" element={<DetailsUsers />} />
+          
+  
+          </Route>
+        
           <Route exact path="/test" element={<Test />} />
 
           <Route exact path="/auth/register" element={<Register />} />

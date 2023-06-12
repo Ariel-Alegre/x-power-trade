@@ -5,8 +5,8 @@ const initialState = {
   ReserveMarkets: [],
   token: localStorage.getItem('token'),
   error: null,
-  DetailUsers: {},
-  CheckEmail: [],
+  userDetail: [],
+  AllUsers: [],
   document: []
 }
 
@@ -48,7 +48,13 @@ export const rootReducer = (state = initialState, action) => {
     case 'ALL_USERS':
       return {
         ...state,
-        CheckEmail: action.payload
+        AllUsers: action.payload
+      }
+
+      case 'USER_DETAILS':
+
+      return {
+        userDetail: action.payload
       }
 
     case 'DOCUMENT': 

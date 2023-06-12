@@ -39,10 +39,7 @@ export default function Login() {
     if (!emailRegex.test(input.email)) {
       errores.email = "El correo electrónico es válido";
     }
-    const verify = check.filter((data) => data.email === user.email);
-    if (verify) {
-      errores.email = "El email ya existe";
-    }
+
     return errores;
   };
 

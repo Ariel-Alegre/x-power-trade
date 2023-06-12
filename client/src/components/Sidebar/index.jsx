@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import SideBarItem from "./sidebar-item";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { SiCashapp } from "react-icons/si";
 import { GoDesktopDownload } from "react-icons/go";
-import { TfiAlignJustify } from "react-icons/tfi";
 import { BiPhone, BiBookOpen } from "react-icons/bi";
 
 import "./styles.css";
@@ -26,9 +24,7 @@ function SideBar({ menu }) {
       });
   }, [location.pathname]);
 
-  const __navigate = (id) => {
-    setActive(id);
-  };
+ 
 
   return (
     <nav className="sidebar">
@@ -47,7 +43,7 @@ function SideBar({ menu }) {
               <AccountBalanceWalletIcon className="icons" />
               <spam >Depósito</spam>
             </Link>
-            <Link to="">
+            <Link to="/platforms">
               <GoDesktopDownload className="icons" />
               <spam >Hacer trading ahora</spam>
             </Link>
@@ -65,7 +61,10 @@ function SideBar({ menu }) {
             </Link>
           </div>
           <div className="sidebar-footer">
-            <span className="sidebar-item-label">Cerrar sesión</span>
+            <span className="sidebar-item-label" onClick={() => {
+              localStorage.clear();
+              Navigate('/auth/login')
+            }}>Cerrar sesión</span>
             <img
               src={LogoutIcon}
               alt="icon-logout"

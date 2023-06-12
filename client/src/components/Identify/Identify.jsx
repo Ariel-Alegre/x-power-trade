@@ -7,6 +7,7 @@ export default function Identify() {
         <div className={styles.ImgContainer}>
 
         <img src={Logo} alt="Not found" />
+        X POWER TRADE
         </div>
       <div className={styles.IdentifyBox}>
         <div className={styles.textContainer}>

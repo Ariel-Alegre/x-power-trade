@@ -13,7 +13,6 @@ export default function Personal() {
 
   const token = useSelector((state) => state.token);
   
-  console.log(user);
 
   useEffect(() => {
     
