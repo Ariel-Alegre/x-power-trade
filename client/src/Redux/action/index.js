@@ -97,6 +97,18 @@ export const uploadDocument = (document) => {
     }
 };
 
+export const deleteUser = (userId) => {
+    return async (dispatch) => {
+        const res = await axios.delete(`http://localhost:3001/admin/user/${userId}`);
+        const data = await res.data;
+
+        return dispatch({
+            type: "DELETE_USER",
+            payload: data
+        })
+    }
+};
+
 export const clean = () => {
     return {
         type: 'CLEAN',

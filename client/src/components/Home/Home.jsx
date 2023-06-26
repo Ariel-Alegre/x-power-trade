@@ -42,7 +42,7 @@ export default function Home() {
           <div className={styles.homeContainer}>
             <img src={publicity} alt="Not found" className={styles.image} />
             <div className={styles.dataPublicity}>
-              <h1>{t("Home.WITH_X")}</h1>
+              <h1>CON <span className={styles.x}>X</span> <strong className={styles.power}>POWER</strong> <span className={styles.trade}>TRADE</span></h1>
               <h1>{t("Home.YOU")}</h1>
               <p>{t("Home.Description")}</p>
               <a href="/dashboard">

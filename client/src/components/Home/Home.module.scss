@@ -1,38 +1,48 @@
 .homeContainer {
     margin-top: 20px;
-    
-    
-    
+
+
+
     .image {
         width: 100%;
     }
-    
+
     .dataPublicity {
         margin-top: -450px;
-        margin-left: 200px;
+        margin-left: 50px;
     }
-    
+
+    .x {
+        color: #1976d2;
+    }
+
+    .power {
+        color: #000;
+    }
+
+    .trade {
+        font-weight: 300;
+    }
+
     .dataPublicity h1 {
-        color: #1F2649;
+        color: white;
+
         font-family: sans-serif;
         font-weight: 600;
         margin-top: -12px;
     }
-    
+
     .dataPublicity p {
         width: 300px;
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        text-align: center;
         font-size: 16px;
-        color: #1F2649;
+        color: white;
         font-family: "Poppins", Sans-serif;
         font-weight: 500;
         margin-top: -5px;
+
     }
-    
+
     .dataPublicity button {
         font-family: "Poppins", Sans-serif;
         font-size: 20px;
@@ -45,21 +55,21 @@
         border-radius: 25px 25px 25px 25px;
         padding: 10px 30px 10px 30px;
     }
-    
+
     .dataPublicity button:hover {
         background-color: #1976d2;
         color: white;
         box-shadow: 0px 0px 4px black;
         border-color: rgb(1, 1, 58);
     }
-    
+
     .cards {
         display: flex;
         margin-right: 50px;
         margin-top: -20px;
         margin-left: 40px;
     }
-    
+
     .cardSuperfast {
         margin-top: 150px;
         margin-left: 40px;
@@ -69,8 +79,8 @@
         padding: 25px 25px 25px 25px;
         background-color: white;
     }
-    
-    
+
+
     .cardSuperfast strong {
         color: #313131;
         font-family: "Poppins", Sans-serif;
@@ -81,9 +91,9 @@
         text-align: center;
         margin-top: 10px;
     }
-    
-    
-    
+
+
+
     .cardSuperfast p {
         text-align: center;
         height: 135px;
@@ -94,7 +104,7 @@
         font-size: 11px;
         font-weight: 500;
     }
-    
+
     .cardTech {
         margin-top: 150px;
         margin-left: 40px;
@@ -103,9 +113,9 @@
         border-radius: 15px;
         padding: 25px 25px 25px 25px;
         background-color: white;
-        
+
     }
-    
+
     .cardTech strong {
         color: #313131;
         font-family: "Poppins", Sans-serif;
@@ -116,7 +126,7 @@
         text-align: center;
         margin-top: 10px;
     }
-    
+
     .cardTech p {
         text-align: center;
         height: 135px;
@@ -127,7 +137,7 @@
         font-size: 11px;
         font-weight: 500;
     }
-    
+
     .cardTight {
         margin-top: 150px;
         margin-left: 40px;
@@ -136,9 +146,9 @@
         border-radius: 15px;
         padding: 25px 25px 25px 25px;
         background-color: white;
-        
+
     }
-    
+
     .cardTight strong {
         color: #313131;
         font-family: "Poppins", Sans-serif;
@@ -149,7 +159,7 @@
         text-align: center;
         margin-top: 10px;
     }
-    
+
     .cardTight p {
         text-align: center;
         height: 135px;
@@ -160,7 +170,7 @@
         font-size: 11px;
         font-weight: 500;
     }
-    
+
     .cardUltimate {
         margin-top: 150px;
         margin-left: 40px;
@@ -169,9 +179,9 @@
         border-radius: 15px;
         padding: 25px 25px 25px 25px;
         background-color: white;
-        
+
     }
-    
+
     .cardUltimate strong {
         color: #313131;
         font-family: "Poppins", Sans-serif;
@@ -182,7 +192,7 @@
         text-align: center;
         margin-top: 10px;
     }
-    
+
     .cardUltimate p {
         text-align: center;
         height: 135px;
@@ -193,23 +203,23 @@
         font-size: 11px;
         font-weight: 500;
     }
-    
+
     .cardSuperfast img {
         margin-left: 57px;
     }
-    
+
     .cardTight img {
         margin-left: 75px;
     }
-    
+
     .cardTech img {
         margin-left: 30px;
     }
-    
+
     .cardUltimate img {
         margin-left: 110px;
     }
-    
+
 }
 
 
@@ -218,52 +228,84 @@
     .homeContainer {
         display: flex;
         flex-direction: column;
-        
+
         .image {
             height: 30vh;
+
         }
-        
+
         .dataPublicity {
             display: flex;
             flex-direction: column;
-            
+            margin-top: -160px;
+            margin-left: 10px;
+
         }
-        
+
         .dataPublicity h1 {
             font-size: 20px;
-            color: black;
-            
+            text-align: center;
+
         }
-        
+
         .dataPublicity p {
             font-size: 16px;
-            color: black;
             margin-left: 40px;
+            font-size: 11px;
         }
-        
+
         .dataPublicity a button {
-            font-size: 13px;
+            font-size: 12px;
             background-color: #1976d2;
             color: white;
+            margin-left: 80px;
         }
-        
+
         .cards {
             display: flex;
             flex-direction: column;
-            width: 300px;
-            margin-top: 50px;
+            margin-top: -80px;
+
         }
-        
+
+        .cardSuperfast {
+
+            width: 100%;
+            margin-left: 5px;
+        }
+
         .cardSuperfast img {
             margin-left: 95px;
         }
+
+        .cardTight {
+            margin-top: 30px;
+
+            width: 100%;
+            margin-left: 5px;
+        }
+
         .cardTight img {
             margin-left: 95px;
         }
+
+        .cardTech {
+            margin-top: 30px;
+
+            width: 100%;
+            margin-left: 5px;
+        }
+
         .cardTech img {
             margin-left: 95px;
         }
-        
+
+        .cardUltimate {
+            margin-top: 30px;
+            width: 100%;
+            margin-left: 5px;
+        }
+
         .cardUltimate img {
             margin-left: 95px;
         }
@@ -272,39 +314,20 @@
 
 .loading_container {
     position: relative;
-  }
-  
-  .loading_container img {
+}
+
+.loading_container img {
     display: block;
     width: 180px;
     margin-top: 20vh;
     margin-left: 40%;
-  }
-  
-  .loading_overlay {
+}
+
+.loading_overlay {
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
-  }
-@media (max-width: 576px) {
-    .homeContainer {
-        .dataPublicity {
-            margin-top: -200px;
-            margin-left: 10px;
-            text-align: center;
-        }
-
-        .cards {
-
-            .cardSuperfast,
-            .cardTech,
-            .cardTight,
-            .cardUltimate {
-                margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
 }
+
+ 

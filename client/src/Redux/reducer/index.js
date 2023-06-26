@@ -61,6 +61,12 @@ export const rootReducer = (state = initialState, action) => {
       return {
         document: action.payload
       }
+
+      case 'DELETE_USER': 
+      const updatedUsers = state.userDetail.filter(user => user.id !== action.payload);
+      return {
+        userDetail: updatedUsers
+      }
     
 
     default: return { ...state }

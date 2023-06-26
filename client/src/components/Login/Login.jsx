@@ -85,6 +85,7 @@ export default function Login() {
             id="outlined-basic"
             label="Contraseña"
             variant="outlined"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
