@@ -1,0 +1,15 @@
+
+
+.tableContainer {
+    max-height: 40em; /* ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+    width: 100%;
+
+  }
+
+  .edit_container {
+    display: grid;
+    gap: 2em;
+  }
+  
+ 

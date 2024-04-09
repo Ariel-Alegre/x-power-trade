@@ -1,0 +1,39 @@
+.TextAndImage {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 80px;
+    gap: 80px;
+
+    .Text p {
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        width: 460px;
+    }
+
+
+    .ImgContainer img {
+        border-radius: 15px;
+        width: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .TextAndImage {
+        margin-top: 50px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .ImgContainer img {
+            width: 350px;
+        }
+
+        .Text p {
+
+            width: 350px;
+
+        }
+    }
+}

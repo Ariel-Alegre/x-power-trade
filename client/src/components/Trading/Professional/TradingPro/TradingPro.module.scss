@@ -1,0 +1,88 @@
+.TextImage {
+    display: flex;
+    gap: 50px;
+    margin-top: 80px;
+    margin-left: 65px;
+}
+
+
+
+.Text h3 {
+    color: #1F2649;
+    font-family: "Poppins", Sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.Text p {
+    font-family: "Poppins", Sans-serif;
+    width: 480px;
+    margin-top: 20px;
+    font-size: 15px;
+
+}
+
+.ImgContainer {
+    margin-bottom: 50px;
+}
+
+.ImgContainer img {
+    border-radius: 10px;
+}
+
+.BtnContainer {
+    margin-bottom: 50px;
+    margin-left: 65px;
+    margin-top: -80px;
+}
+
+.BtnContainer button {
+    font-family: "Poppins", Sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #1F2649;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 250px;
+}
+
+
+.BtnContainer button:hover {
+    background-color: #1976d2;
+    color: white;
+    box-shadow: 0px 0px 4px black;
+    border-color: #1F2649;
+}
+
+.BtnContainer button span {
+    font-family: "Poppins", Sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+@media (max-width: 768px) {
+
+    .TextImage {
+        margin-left: 40px;
+    }
+
+    .Text h3 {
+        width: 330px;
+        font-size: 22px;
+    }
+
+    .Text p {
+        width: 330px;
+    }
+
+    .BtnContainer {
+        margin-top: 20px;
+    }
+
+
+}

@@ -1,0 +1,71 @@
+import styles from "./Advantages.module.scss";
+import icons1 from "../../../../icons/trading-forex-1-pkgroaftneuk75yohx6bj3edi9zt31wkcgo7ikn400.png";
+import icons2 from "../../../../icons/trading-forex-2-pkgroaftneuk75yohx6bj3edi9zt31wkcgo7ikn400.png";
+import icons3 from "../../../../icons/trading-commodities-2-pkgroaftneuk75yohx6bj3edi9zt31wkcgo7ikn400.png";
+import icons4 from "../../../../icons/trading-crypto-4-pkgroaftneuk75yohx6bj3edi9zt31wkcgo7ikn400.png";
+import icons5 from "../../../../icons/trading-commodities-3-pkgroaftneuk75yohx6bj3edi9zt31wkcgo7ikn400.png";
+
+export default function Advantages() {
+  return (
+    <div className={styles.Advantages}>
+      <div className={styles.Text}>
+        <h6>Las ventajas de</h6>
+        <h3>
+          Trading en Forex con <span className={styles.marca}>X</span>{" "}
+          <span className={styles.marca1}>POWER</span>{" "}
+          <span className={styles.marca2}>TRADE</span>
+        </h3>
+      </div>
+      <div className={styles.IconsContainer}>
+        <div>
+          <img src={icons1} alt="Not found" />
+          <p>
+            HAGA TRADING CON MÁS DE
+            <br />
+            190 PARES DE DIVISAS
+          </p>
+        </div>
+        <div>
+          <img src={icons2} alt="Not found" />
+          <p>
+            HERRAMIENTAS DE TRADING
+            <br />
+            DE FOREX DE ALTA
+            <br />
+            TECNOLOGÍA
+          </p>
+        </div>
+        <div>
+          <img src={icons3} alt="Not found" />
+          <p>
+            BENEFICIOS FLEXIBLES DE
+            <br />
+            TRADING
+          </p>
+        </div>
+        <div>
+          <img src={icons4} alt="Not found" />
+          <p>
+            ATENCIÓN AL CLIENTE
+            <br />
+            PROFESIONAL LAS 24 HORAS
+            <br />
+            DEL DÍA Y 5 DÍAS DE LA
+            <br />
+            SEMANA
+          </p>
+        </div>
+        <div>
+          <img src={icons5} alt="Not found" />
+          <p>
+            HAGA TRADING CON UN
+            <br />
+            BRÓKER REGLAMENTADO Y
+            <br />
+            CON LICENCIA GLOBAL
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

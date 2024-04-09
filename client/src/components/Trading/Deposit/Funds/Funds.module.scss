@@ -1,0 +1,94 @@
+.FundsContainer {
+    margin-top: -450px;
+
+    .TextContainer h3 {
+        color: #1F2649;
+        font-family: "Poppins", Sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .TextContainer p {
+        text-align: center;
+        font-family: "Poppins", Sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: 20px;
+        width: 650px;
+        margin-left: 300px;
+    }
+
+    .PaymentContainer {
+        display: flex;
+        gap: 50px;
+        margin-left: 80px;
+        margin-top: 100px;
+    }
+
+    .PaymentText h3 {
+        color: #1F2649;
+        font-family: "Poppins", Sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .PaymentText p {
+        font-family: "Poppins", Sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-right: 50px;
+    }
+
+
+    .ImgContainer img {
+        width: 350px;
+    }
+
+    .BtnContainer {
+        margin-right: 290px;
+
+    }
+
+    .BtnContainer button {
+        background-color: #1F2649;
+        color: white;
+        border-radius: 25px 25px 25px 25px;
+        border: none;
+        width: 130px;
+        height: 40px;
+    }
+
+    .BtnContainer button:hover {
+        background-color: #1976d2;
+        color: white;
+        box-shadow: 0px 0px 4px black;
+        border-color: rgb(1, 1, 58);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .FundsContainer {
+        .TextContainer p {
+            margin-left: 20px;
+            width: 350px;
+        }
+
+        .ImgContainer img {
+            width: 330px;
+        }
+
+        .PaymentContainer {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .BtnContainer {
+            margin-left: 90px;
+        }
+    }
+}

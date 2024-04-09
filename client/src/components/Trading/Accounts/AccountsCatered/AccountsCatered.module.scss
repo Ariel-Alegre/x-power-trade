@@ -1,0 +1,45 @@
+.CateredContainer {
+    background-color: #a8b3cb;
+    margin-top: 75px;
+    height: 270vh;
+    
+    
+    .Text {
+        margin-left: 70px;
+        position: absolute;
+         margin-top: 80px;
+    }
+    .Text h6 {
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 24px;
+        color: #1976d2;
+    }
+
+    .Text h3 {
+        color: #1F2649;
+        font-family: "Poppins", Sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+
+    .Text p {
+        font-size: 14px;
+        margin-top: 20px;
+        font-family: sans-serif;
+        width: 1000px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .CateredContainer {   
+        display: none;
+    }
+    
+  
+}

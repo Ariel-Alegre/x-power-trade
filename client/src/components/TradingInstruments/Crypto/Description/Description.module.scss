@@ -1,0 +1,120 @@
+
+
+
+.TextImage {
+    display: flex;
+    gap: 50px;
+    margin-top: 130px;
+    margin-left: 65px;
+
+}
+
+
+.Text p {
+    font-family: "Poppins", Sans-serif;
+    width: 480px;
+    margin-top: 20px;
+    font-size: 15px;
+
+}
+
+.Text h3 {
+    color: #1F2649;
+    font-family: "Poppins", Sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+
+.Text h6 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #1976d2;
+}
+
+.Text p a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.ImgContainer {
+    margin-bottom: 50px;
+    margin-right: 70px;
+}
+
+.ImgContainer img {
+    border-radius: 10px;
+    width: 500px;
+}
+
+.BtnContainer {
+    margin-bottom: 150px;
+    margin-left: 65px;
+    margin-top: 0px;
+}
+
+.BtnContainer button {
+    border-radius: 25px 25px 25px 25px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 150px;
+}
+
+.BtnContainer button span {
+    font-family: "Poppins", Sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+
+.BtnContainer button:hover {
+    background-color: #1976d2;
+    color:  rgb(1, 1, 58);;
+    box-shadow: 0px 0px 4px black;
+    border-color: rgb(1, 1, 58);
+}
+
+.marca {
+    color: #1976d2;
+
+}
+
+.marca1 {
+    color:black
+}
+.marca2 {
+    font-weight: 500;
+    color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+    .TextImage {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+    }
+
+   .Text {
+       margin-top: -50px;
+   }
+
+   .Text p {
+       width: 350px;
+   }
+
+    .ImgContainer img {
+       width: 330px;
+    }
+
+    .BtnContainer {
+       margin-top: 30px;
+    }
+}

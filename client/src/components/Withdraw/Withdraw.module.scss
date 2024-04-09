@@ -1,0 +1,127 @@
+.withdrawContainer {
+    margin-top: 50px;
+}
+.Logo {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.withdrawContainer h2 {
+     font-size: 35px;
+}
+
+
+.withdraw {
+    margin-top: 40px;
+}
+.withdraw p {
+  color: #6585a4;
+  font-size: 12px;
+}
+
+.withdraw input {
+    background-color: #6584a42e;
+    width: 650px;
+    outline: none;
+    border-style: double;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px #05284a;
+    height: 40px;
+    opacity: 0.5;
+    margin-top: -8px;
+    
+}
+
+.minAndMax {
+    margin-left: -5px;
+    margin-top: 40px;
+}
+
+.minAndMax input{
+    width: 655px;
+    border: none;
+}
+
+.list p {
+   font-size: 25px;
+   font-weight: 350;
+}
+
+.list ul {
+    width: 650px;
+}
+
+.checkContainer {
+    margin-top: 10px;
+   
+}
+
+.check label {
+    width: 650px;
+    margin-top: 31px;
+}
+
+.checkContainer button{
+margin-top: 40px;
+margin-bottom: 40px;
+border: none;
+width: 120px;
+height:45px;
+background-color: #1976d2;
+color: white;
+border-radius: 8px;
+}
+
+.registration p {
+    font-size: 25px;
+    font-weight: 350;
+}
+
+.registrations {
+    box-shadow: 0px 0px 1px ;
+    width: 650px;
+    border-radius: 8px;
+    border: 0.1rem solid #d1dce8;
+    min-height: 5rem;
+    background-color: #ecf0f9;
+}
+
+.registrations p {
+    font-size: 15px;
+    color: #6585a4;
+    padding: 2rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+    .withdrawContainer h2 {
+        font-size: 25px;
+   }
+   .withdraw input {
+    width: 100%;
+
+}
+.minAndMax input{
+    width: 100%;
+
+
+}
+.list p {
+    font-size: 18px;
+    font-weight: 350;
+ }
+ .list ul {
+    width: 100%;
+
+}
+.check label {
+    width: 100%;
+
+
+}
+.registrations {
+    width: 100%;
+
+}
+
+}

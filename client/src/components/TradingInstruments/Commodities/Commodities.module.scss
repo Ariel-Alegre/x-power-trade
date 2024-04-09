@@ -1,0 +1,17 @@
+.loading_container {
+    position: relative;
+  }
+  
+  .loading_container img {
+    display: block;
+    width: 180px;
+    margin-top: 20vh;
+    margin-left: 40%;
+  }
+  
+  .loading_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }

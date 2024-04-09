@@ -1,0 +1,141 @@
+.Text {
+    margin-top: 110px;
+    margin-left: 70px;
+    width: 460px;
+}
+
+.Text p {
+    margin-top: -30px;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.btnContainer {
+    margin-top: 70px;
+}
+
+.btnContainer button {
+    font-family: "Poppins", Sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #1F2649;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 180px;
+}
+
+.btnContainer button:hover {
+    background-color: #1976d2;
+    color: white;
+    box-shadow: 0px 0px 4px black;
+    border-color: #1F2649;
+}
+
+.imgContainer {
+    float: right;
+    margin-right: 50px;
+    margin-top: 80px;
+}
+
+.imgContainer img {
+    border-radius: 10px 10px 10px 10px;
+    height: 340px;
+}
+
+
+.TextSecond {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    display: flex;
+    gap: 80px;
+}
+
+.TextSecond h6 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #1976d2;
+}
+
+.TextSecond h3 {
+    color: #1F2649;
+    font-family: "Poppins", Sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.TextSecond p {
+    font-family: "Poppins", Sans-serif;
+    width: 480px;
+    margin-top: 20px;
+
+}
+
+.History {
+    margin-top: 20px;
+}
+
+.loading_container {
+    position: relative;
+  }
+  
+  .loading_container img {
+    display: block;
+    width: 180px;
+    margin-top: 20vh;
+    margin-left: 40%;
+  }
+  
+  .loading_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+
+@media screen and (max-width: 768px) {
+    .imgContainer {
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+    .imgContainer img {
+        height: 230px;
+        margin-bottom: 50px;
+    }
+
+    .Text {
+        margin-left: 25px;
+    }
+
+    .Text p {
+        width: 340px;
+    }
+.btnContainer {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.TextSecond {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.TextSecond p{
+    width: 350px;
+}
+
+.History {
+    margin-top: -75px;
+}
+
+   
+  
+}

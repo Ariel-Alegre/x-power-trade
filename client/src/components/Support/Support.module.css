@@ -1,0 +1,180 @@
+.Logo {
+
+}
+
+.SupportContainer {
+  margin-top: 50px;
+}
+
+.SupportContainer img {
+  width: 700px;
+  height: 250px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.btnContainer {
+  margin-top: 20px;
+  box-shadow: 0px 0px 1px;
+  display: flex;
+  gap: 40px;
+  width: 356px;
+  border-radius: 8px;
+  height: 62px;
+}
+
+.btnContainer button {
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 13px;
+  color: #6585a4;
+  width: 150px;
+  height: 55px;
+  margin-top: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  
+}
+
+.btnContainer button:focus {
+  background-color: #1976d2;
+  color: white;
+}
+
+.icons {
+  display: grid;
+  justify-content: center;
+  margin-left: 45px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.form {
+  margin-top: 40px;
+}
+
+
+
+.emailContainer p {
+  font-size: 12px;
+  color: #6585a4;
+}
+
+.emailContainer input{
+  width: 600px;
+  border-width: 1px;
+  box-shadow: 0px 0px 1px;
+  height: 45px;
+  border-radius: 8px;
+  margin-top: -8px;
+ 
+}
+.emailContainer input::placeholder {
+ margin-left: 15px;
+ margin-top: 9px;
+}
+
+.emailContainer input:hover {
+  border-width: 1px;
+  
+}
+
+.emailContainer input:focus {
+ border-color: #1976d2;
+
+}
+.asuntoContainer p {
+  font-size: 12px;
+  color: #6585a4;
+}
+.asuntoContainer {
+  margin-top: 30px;
+}
+
+.formSelect  {
+  width: 600px;
+  height: 45px;
+  border-radius: 8px;
+  margin-top: -8px;
+}
+
+.formSelect:focus {
+  border-color: #1976d2;
+}
+
+.message textarea {
+  width: 600px;
+  outline: none;
+  border-width: 1px;
+  box-shadow: 0px 0px 1px;
+  height: 150px;
+  border-radius: 8px;
+  margin-top: -8px;
+
+}
+
+.message textarea:focus {
+  border-color: #1976d2;
+
+}
+
+.message textarea::placeholder {
+  padding: 1rem;
+}
+
+.message p {
+  font-size: 12px;
+  color: #6585a4;
+}
+
+.message {
+  margin-top: 30px;
+}
+
+.btn {
+ width: 450px;
+ margin-top: 30px;
+ border: none;
+ color: white;
+ background-color: #1976d2;
+ border-radius: 8px;
+ height: 45px;
+ margin-bottom: 30px;
+
+}
+
+@media screen and (max-width: 767px) {
+  .SupportContainer img {
+    width: 100%;
+
+  
+  }
+  .emailContainer input{
+    width: 100%;
+
+
+   
+  }
+  .formSelect  {
+    width: 100%;
+
+
+  }
+
+  .message textarea {
+    width: 100%;
+
+
+
+ 
+  
+  }
+  .btn {
+    width: 100%;
+
+  
+   
+   }
+}
+

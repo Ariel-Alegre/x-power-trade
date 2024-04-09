@@ -1,0 +1,106 @@
+ .WithdrawContainer {
+     background-color: #F1F1F1;
+     height: 150vh;
+     margin-top: 110px;
+     background-size: cover;
+
+     .TextContainer {
+         margin-top: 80px;
+         position: absolute;
+     }
+
+     .Title {
+         text-align: center;
+     }
+
+     .Title h3 {
+         color: #1F2649;
+         font-family: "Poppins", Sans-serif;
+         font-size: 30px;
+         font-weight: 800;
+         line-height: 24px;
+         text-align: center;
+     }
+
+     .Title p {
+         text-align: center;
+         font-family: "Poppins", Sans-serif;
+         font-size: 17px;
+         font-weight: 400;
+         margin-top: 20px;
+     }
+
+     .Step1 h3 {
+         font-family: "Poppins", Sans-serif;
+         font-weight: 600;
+         line-height: 50px;
+     }
+
+     .Step1 p {
+         font-family: "Poppins", Sans-serif;
+         font-size: 17px;
+         font-weight: 400;
+         margin-top: 20px;
+         width: 1050px;
+     }
+
+     .Step2 h3 {
+         font-family: "Poppins", Sans-serif;
+         font-weight: 600;
+         line-height: 50px;
+         margin-top: 35px;
+     }
+
+     .Step2 p {
+         font-family: "Poppins", Sans-serif;
+         font-size: 17px;
+         font-weight: 400;
+         margin-top: 20px;
+         width: 1050px;
+     }
+
+     .StepsContainer {
+         margin-left: 70px;
+         margin-top: 100px;
+     }
+
+     .Step2 p a {
+         color: #1976d2;
+         text-decoration: none;
+     }
+ }
+
+
+
+ @media only screen and (max-width: 768px) {
+     .WithdrawContainer {
+         margin-bottom: 130px;
+         height: 235vh;
+
+         .TextContainer {
+
+             margin-left: 20px;
+
+             .Title {
+                 width: 350px;
+             }
+
+             .Step1 {
+                 margin-left: -60px;
+             }
+
+             .Step1 p {
+                 width: 350px;
+             }
+
+             .Step2 {
+                 margin-left: -60px;
+             }
+
+             .Step2 p {
+                 width: 350px;
+             }
+         }
+
+     }
+ }

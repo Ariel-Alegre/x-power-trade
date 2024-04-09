@@ -1,0 +1,36 @@
+.image {
+    width: 230px;
+    height: 115px;
+
+}
+.row {
+    display: flex;
+}
+
+.ImageContainer {
+    margin-top: 50px;
+
+}
+
+.ImageContainer button {
+    width: 450px;
+    
+}
+
+@media (max-width: 768px) {
+    .ImageContainer button {
+        max-width: 100%;
+        width: 300px;
+        
+    }
+    .image {
+        width: 230px;
+        height: 40px;
+    
+    }
+}
+
+
+
+
+

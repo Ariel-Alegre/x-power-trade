@@ -1,0 +1,157 @@
+.footerContainer {
+
+
+    .logoAndRedes img {
+        width: 230px;
+
+    }
+
+    .logoAndRedes p {
+        color: black;
+        margin-top: 20px;
+    }
+
+    .logoAndRedes {
+        margin-top: -260px;
+        margin-left: 60px;
+        display: none;
+    }
+
+    .redes {
+        display: none;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .icons {
+        color: black;
+    }
+
+    .secciones {
+        display: none;
+        gap: 80px;
+        margin-left: 22%;
+        width: 300px;
+    }
+
+    .secciones h4 {
+        color: black;
+        font-weight: 700;
+        margin-top: 80px;
+
+    }
+
+    .About {
+        margin-top: 130px;
+        margin-left: -160px;
+        display: grid;
+    }
+
+    .About a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .hr {
+        margin-top: 2px;
+    }
+
+    .Trading {
+        margin-top: 130px;
+        margin-left: -183px;
+        display: grid;
+    }
+
+    .Trading a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .hrLong {
+        width: 100%;
+        height: 2px;
+        background: black;
+        margin-top: 120px;
+    }
+
+    .data {
+        color: black;
+        display: none;
+        float: right;
+        margin-top: -210px;
+        background-color: #2E2E2E;
+        border-color: #1976d2;
+        border-radius: 10px 10px 10px 10px;
+        border-width: 2px 2px 2px 2px;
+        padding: 30px 15px 20px 15px;
+        border-style: solid;
+        margin-right: 50px;
+
+    }
+
+    .data label {
+        width: 400px;
+
+    }
+
+    .text {
+        color: black;
+        font-size: 13px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: 60px;
+    }
+
+    .text p a {
+        text-decoration: none;
+        color: #1976d2;
+    }
+
+    .hrEnd {
+        width: 80%;
+        height: 2px;
+        background: black;
+        opacity: 0.8;
+        margin-top: 45px;
+        margin-left: 120px;
+    }
+
+    .reserved {
+        display: flex;
+        color: black;
+        justify-content: center;
+        font-size: 13px;
+        margin-top: 30px;
+        gap: 5px;
+        margin-bottom: 50px;
+    }
+
+    .reserved p {
+        opacity: 0.7;
+    }
+
+
+    .reserved label {
+        color: #1976d2;
+    }
+
+    .logoAndRedes img {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hrLong {
+        margin-left: 5px;
+        margin-top: -150px;
+        height: 0.1rem;
+    }
+
+    .hrEnd {
+        display: none;
+    }
+
+    .reserved {
+        margin-bottom: 50px;
+    }
+}

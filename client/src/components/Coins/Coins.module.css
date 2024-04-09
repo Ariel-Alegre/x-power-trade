@@ -1,0 +1,30 @@
+.modal_img img {
+  margin: auto;
+  width: 80px;
+}
+
+
+  
+
+  .ul_modal{
+    text-align: center;
+  }
+
+  .table {
+    max-height: 400px;
+    width: 100%;
+    max-width: 100%;
+    overflow-y:  auto;
+
+  }
+ .laptop_trading{
+  display: none;
+ }
+
+  @media (max-width: 768px) {
+    .table {
+      max-height: 400px;
+      max-width: 300px;
+      overflow:  auto;
+    } 
+  }

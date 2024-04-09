@@ -1,0 +1,93 @@
+.videoContainer {
+    margin-left: 83px;
+
+    .playImage {
+        border-radius: 15px;
+        margin-top: 80px;
+        width: 600px;
+    }
+
+    .iconPlay {
+        margin-left: -330px;
+        margin-top: 80px;
+        cursor: pointer;
+    }
+
+    .textVideo {
+        margin-left: 630px;
+        margin-top: -400px;
+    }
+
+    .textVideo h6 {
+        font-family: Sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        color: #1976d2;
+    }
+
+    .textVideo h3 {
+        margin-top: 15px;
+        color: #1F2649;
+        font-family: "Poppins", Sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 24px;
+    }
+
+    .textVideo p {
+        margin-top: 20px;
+        font-family: "Poppins", Sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        width: 450px;
+    }
+
+    .btnExit {
+        float: right;
+        margin-left: 500px;
+    }
+
+    .textVideo button {
+        background-color: rgb(1, 1, 58);
+        color: white;
+        font-family: Sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 25px;
+        border: none;
+        width: 150px;
+        height: 35px;
+        margin-top: 40px;
+    }
+
+    .textVideo button:hover {
+        background-color: #1976d2;
+        color: white;
+        box-shadow: 0px 0px 4px black;
+        border-color: rgb(1, 1, 58);
+    }
+
+}
+    /* Media Query para pantallas de 768px o menos */
+    @media (max-width: 768px) {
+        .videoContainer {
+            margin-left: 20px;
+            .playImage {
+                width: 350px;
+            }
+            .iconPlay {
+                margin-left: 145px;
+                margin-top: -260px;
+            }
+
+            .textVideo {
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+
+            .textVideo p {
+                width: 300px;
+            }
+        }
+    }

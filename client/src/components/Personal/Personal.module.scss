@@ -1,0 +1,97 @@
+ 
+.PersonalContainer {
+    margin-top: 40px;
+}
+
+.h1 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+
+.orderInput {
+    display: grid;
+    margin-left: 20%;
+    margin-top: 20vh;
+  }
+  
+  
+  .LogoContainer {
+    float: right;
+    margin-top: -40px;
+    margin-right: -450px;
+  }
+  
+  .LogoContainer img {
+    width: 100px;
+  }
+  
+  .ImgContainer {
+    float: right;
+    margin-top: 150px;
+    margin-right: 150px;
+    box-shadow: 0px 0px 10px black;
+  
+  }
+  
+  .ImgContainer img {
+    width: 350px;
+  }
+  
+  .orderInput input {
+    width: 40%;
+    height: 35px;
+    border-radius: 10px;
+   
+  }
+  
+  .orderInput p {
+    font-size: 12px;
+  }
+  
+  .loginRedes{
+    margin-top: -10px;
+    text-align: center;
+  
+  }
+
+  .loginRedes a {
+    text-decoration: none;
+  }
+  
+  .hr {
+    width: 400px;
+    margin-left: 15%;
+  }
+  .inputContainer {
+    display: flex;
+    gap: 10px;
+  }
+
+  .data {
+   display: grid;
+  width: 100%;
+  }
+
+
+  .das {
+    outline: none ;
+  }
+
+
+  @media (max-width: 768px) {
+    .h1 {
+      text-align: start;
+    }
+    .inputContainer {
+    display: grid;
+    gap: 2em;
+    }
+
+
+  .input_mobile {
+width: 200px;
+  }
+  }
+  
+  

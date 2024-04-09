@@ -1,0 +1,114 @@
+.NavBarContainer {
+    display: flex;
+    margin-top: 40px;
+
+
+}
+
+
+
+.NavBarContainer button {
+    font-size: 13px;
+    margin-left: 50px;
+}
+
+.NavBarContainer a {
+    font-size: 13px;
+}
+
+.NavBarContainer a:active {
+    background-color: white;
+    color: black;
+}
+
+.select {
+    margin-left: 20px;
+}
+
+
+.select ul {
+    cursor: pointer;
+    font-size: 11px;
+    font-family: sans-serif;
+    background-color: white;
+    font-weight: 600;
+}
+
+.list {
+    display: none;
+    box-shadow: 0px 0px 1px black;
+    width: 200px;
+    margin-left: 0px;
+    position: absolute;
+    background-color: white;
+    background: white;
+    font-weight: 500;
+
+
+}
+
+
+.list a {
+    height: 50px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+
+
+
+.list a:hover {
+    background-color: #1976d2;
+
+    li {
+        color: white;
+        background-color: #1976d2;
+    }
+}
+
+
+.list a li {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.select ul:hover li {
+    display: grid;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+.select ul:hover .icon {
+    transform: rotate(180deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+   .toggle {
+ display: none;
+   }
+}

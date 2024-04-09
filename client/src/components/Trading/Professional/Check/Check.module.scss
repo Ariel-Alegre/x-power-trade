@@ -1,0 +1,55 @@
+.CheckContainer{
+margin-left: 100px;
+margin-top: 70px;
+margin-bottom: 100px;
+}
+
+.CheckContainer h3 {
+color: #1F2649;
+    font-family: "Poppins", Sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 24px;
+}
+
+.CheckContainer p {
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+
+.Bg{
+    margin: 20px 0px 0px 0px;
+    padding: 30px 30px 30px 30px;
+    background-color: rgb(1, 1, 58);
+    border-radius: 6px 6px 6px 6px;
+    width: 1050px;
+}
+
+.Text {
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+
+    .CheckContainer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+
+        .Bg {
+            width: 320px;
+        }
+
+        .Text {
+            font-size: 17px;
+        }
+    }
+  
+}

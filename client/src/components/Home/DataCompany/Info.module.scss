@@ -1,0 +1,59 @@
+.InfoContainer {
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-bottom: 150px;
+    display: flex;
+
+    .Info {
+        display: flex;
+    }
+
+    .Info img {
+        position: absolute;
+    }
+
+    .Info p {
+        color: rgb(1, 1, 58);
+        font-family: "Poppins", Sans-serif;
+        font-size: 21px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 85px;
+        margin-top: 0px;
+        width: 300px;
+    }
+
+    .Info h1 {
+        font-weight: bold;
+        color: rgb(1, 1, 117);
+        margin-top: 55px;
+        margin-left: 90px;
+        position: absolute;
+        font-family: sans-serif;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .InfoContainer {
+        display: grid;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .Info {
+            margin-top: 60px;
+        }
+
+        .Info h1 {
+            margin-top: 30px;
+
+        }
+
+        .Info p {
+            font-size: 17px;
+        }
+    }
+
+}

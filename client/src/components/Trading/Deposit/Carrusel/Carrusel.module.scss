@@ -1,0 +1,58 @@
+.CarruselContainer {
+    width: 100%;
+    margin-bottom: 540px;
+    margin-top: 50px;
+
+}
+.img {
+    width:1000px;
+    height: 800px;
+    margin-left: 110px;
+}
+.Description {
+    background-color: #1976d2;
+    opacity: 0.9;
+    padding: 36px 30px;
+    border-radius: 10px;
+    margin-right: 450px;
+}
+
+.Description h3 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.Description span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    position: relative;
+    padding-left: 35px;
+}
+
+.Description p {
+    font-family: "Poppins", Sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+    .CarruselContainer {
+      width: 470px;
+      margin-left: -90px;
+      .img {
+        width: 350px;
+        height: 200px;
+      }
+
+      .Description {
+       display: none;
+      }
+    }
+}

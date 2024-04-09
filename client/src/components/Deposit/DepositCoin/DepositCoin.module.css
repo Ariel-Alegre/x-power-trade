@@ -1,0 +1,9 @@
+
+.info-text {
+width: 100%;
+}
+@media (max-width: 768px) {
+    .coins_container{
+        margin-left: -50px;
+    }
+}

@@ -1,0 +1,13 @@
+.graphic {
+  margin-top: 3em;
+  display: grid;
+  gap: 1em;
+}
+#tradingview_a06ab {
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .trading {
+    display: none;
+  }
+}
