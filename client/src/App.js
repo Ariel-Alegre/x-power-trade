@@ -35,6 +35,7 @@ import EditCoins from './components/EditCoins/EditCoins'
 import Admin from "./components/Admin/Admin";
 import Users from "./components/Admin/Users/Users";
 import Perfil from "./components/Perfil/Perfil";
+import DetailsUsers from "./components/DetailsUsers/DetailsUsers";
 
 
 
@@ -70,6 +71,8 @@ function App() {
               <Route index element={<EditCoins />} />
               <Route path="market" element={<EditCoins />} />
               <Route path="users" element={<Users />} />
+              <Route path="user-details/:userId" element={<DetailsUsers />} />
+
             </Route>
 
   {/*           <Route exact path="/home" element={<Home />} />

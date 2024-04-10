@@ -14,7 +14,7 @@ const initialState = {
   success: false,
   message: null,
   dataCoinsPurches: [],
-
+datauser: []
   
   
   }
@@ -62,7 +62,14 @@ const initialState = {
 
             };
 
-            case 'ALL_COINS':
+            case 'DATA_USER':
+              return {
+                ...state,
+                datauser: action.payload
+  
+              };
+
+                     case 'ALL_COINS':
               return {
                 ...state,
                 coins: action.payload
@@ -117,6 +124,11 @@ const initialState = {
                         ...state,
                         dataCoinsPurches: action.payload,
                       };
+                      case 'EDIT_WALLETUSER':
+                        return {
+                          ...state,
+                        };
+                      
 
       default: return { ...state }
     }

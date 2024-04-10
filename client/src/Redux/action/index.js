@@ -58,9 +58,9 @@ export const logout = () => {
 };
 
 
-export const Users = () => {
+export const AllUsers = () => {
   return async (dispatch) => {
-    const res = axios.get('http://localhost:3001/users')
+    const res = await axios.get('http://localhost:3001/userdata')
     const data = res.data
 
     return dispatch({
@@ -72,7 +72,22 @@ export const Users = () => {
 }
 
 
+export const DataUser = (walletId) => {
+  return async (dispatch) => {
+    try {
+      const res = await axios.get(`http://localhost:3001/userdata/${walletId}`);
+      const data = res.data;
 
+      dispatch({
+        type: 'DATA_USER',
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error al obtener datos del usuario:", error);
+      // Podrías dispatch una acción de error si es necesario
+    }
+  };
+};
 
 export const DataPersonal = (token) => {
   return async (dispatch) => {
@@ -275,6 +290,25 @@ export const DataCoinsPurches = (token) => {
       });
     } catch (error) {
       console.error("Error al obtener datos de moneda compradas:", error);
+      // Podrías dispatch una acción de error si es necesario
+    }
+  };
+};
+
+
+export const EditWalletUser = (walletId, payload) => {
+  return async (dispatch) => {
+    try {
+      const res = await axios.put(`http://localhost:3001/editwallet/${walletId}`, payload);
+
+      const data = res.data;
+
+      dispatch({
+        type: 'EDIT_WALLETUSER',
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error al editar wallet del usuario:", error);
       // Podrías dispatch una acción de error si es necesario
     }
   };

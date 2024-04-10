@@ -3,21 +3,20 @@ const axios = require('axios');
 
 module.exports = {
     InfoUsers: async (req, res) => {
-        console.log("Buscando usuario con ID:", userId) 
 
         try {
-            const user = await Wallet.findByPk(userId, {
+            const walletUser = await Wallet.findAll({
                 include: [{
                     model: User // Utiliza el modelo Wallet en la inclusión
                 }]
             });
 
-            if (!user) {
+            if (!walletUser) {
                 console.log("Usuario no encontrado");
                 return res.status(404).send({ success: false, data: "Usuario no encontrado" });
             }
 
-            return res.status(200).send({ success: true, user });
+            return res.status(200).send({ success: true, data: walletUser });
 
         } catch (error) {
             console.error('Error al obtener información del usuario:', error);

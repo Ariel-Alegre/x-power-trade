@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
-import { Register, Users } from "../../Redux/action";
+import { Register, AllUsers } from "../../Redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import { message } from "antd";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -45,8 +45,8 @@ export default function RegisterForm() {
   };
 
   useEffect(() => {
-    dispatch(Users());
-  }, []);
+    dispatch(AllUsers());
+  }, [dispatch]);
 
   const handleCountryChange = (event) => {
     const selectedCountryIndex = event.target.selectedIndex;

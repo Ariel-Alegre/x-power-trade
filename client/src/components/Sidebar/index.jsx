@@ -50,7 +50,7 @@ function Sidebar(props) {
   const dataPersonal = useSelector((state) => state.dataPersonal);
   const token = useSelector((state) => state.token);
   const [selectedItem, setSelectedItem] = React.useState(null);
-
+console.log(dataPersonal)
   const handleMenuItemClick = (item) => {
     setSelectedItem(item);
     setMobileOpen(false);

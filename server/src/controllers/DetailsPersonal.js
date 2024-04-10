@@ -1,6 +1,6 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
-const { User } = require('../db');
+const { User, Wallet } = require('../db');
 
 module.exports = {
   DetailsPersonal: async (req, res) => {
@@ -15,7 +15,11 @@ module.exports = {
       // Obtener todos los datos del usuario desde la base de datos
       const user = await User.findOne({ 
         where: { id: payload.id },
-       });
+        include: [{
+            model: Wallet
+        }]
+    });
+    
 
       if (!user) {
         console.log('Usuario no encontrado');
