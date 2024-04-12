@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const Register = (payload) => {
   return async (dispatch) => {
-    const res = axios.post('http://localhost:3001/register', payload)
+    const res = axios.post('https://x-power-trade-production.up.railway.app/register', payload)
     const data = res.data
 
     return dispatch({
@@ -17,7 +17,7 @@ export const Register = (payload) => {
 export const login = (email, password) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post("https://x-power-trade-production.up.railway.app/login", {
         email,
         password,
       });
@@ -60,7 +60,7 @@ export const logout = () => {
 
 export const AllUsers = () => {
   return async (dispatch) => {
-    const res = await axios.get('http://localhost:3001/userdata')
+    const res = await axios.get('https://x-power-trade-production.up.railway.app/userdata')
     const data = res.data
 
     return dispatch({
@@ -75,7 +75,7 @@ export const AllUsers = () => {
 export const DataUser = (walletId) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:3001/userdata/${walletId}`);
+      const res = await axios.get(`https://x-power-trade-production.up.railway.app/userdata/${walletId}`);
       const data = res.data;
 
       dispatch({
@@ -92,7 +92,7 @@ export const DataUser = (walletId) => {
 export const DataPersonal = (token) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:3001/user', {
+      const res = await axios.get('https://x-power-trade-production.up.railway.app/user', {
         method: "GET",
         headers: {
           Authorization: `${token}`,
@@ -116,7 +116,7 @@ export const DataPersonal = (token) => {
 export const Coins = () => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:3001/api/coins');
+      const res = await axios.get('https://x-power-trade-production.up.railway.app/api/coins');
 
       const data = res.data;
 
@@ -135,7 +135,7 @@ export const Coins = () => {
 export const ChangePriceCoins = (coinId, newPricePurchase, newPriceSale) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post('http://localhost:3001/api/coins/update-price', {
+      const res = await axios.post('https://x-power-trade-production.up.railway.app/api/coins/update-price', {
         coinId,
         newPricePurchase,
         newPriceSale,
@@ -157,7 +157,7 @@ export const ChangePriceCoins = (coinId, newPricePurchase, newPriceSale) => {
 export const PaymentDeposite = (payload) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post('http://localhost:3001/payment', payload);
+      const res = await axios.post('https://x-power-trade-production.up.railway.app/payment', payload);
       const data = res.data;
 
       dispatch({
@@ -178,7 +178,7 @@ export const PaymentDeposite = (payload) => {
 export const Wallet = (token) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:3001/wallet', {
+      const res = await axios.get('https://x-power-trade-production.up.railway.app/wallet', {
         method: "GET",
         headers: {
           Authorization: `${token}`,
@@ -203,7 +203,7 @@ export const Wallet = (token) => {
 export const buyCoins = (token, payload) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post('http://localhost:3001/buy', payload, {
+      const res = await axios.post('https://x-power-trade-production.up.railway.app/buy', payload, {
         headers: {
           Authorization: token,
           "Content-Type": "application/json",
@@ -239,7 +239,7 @@ export const buyCoins = (token, payload) => {
 export const sellCoins = (token, payload) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post('http://localhost:3001/sell', payload, {
+      const res = await axios.post('https://x-power-trade-production.up.railway.app/sell', payload, {
         headers: {
           Authorization: token,
           "Content-Type": "application/json",
@@ -274,7 +274,7 @@ export const sellCoins = (token, payload) => {
 export const DataCoinsPurches = (token) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:3001/transaction', {
+      const res = await axios.get('https://x-power-trade-production.up.railway.app/transaction', {
         method: "GET",
         headers: {
           Authorization: `${token}`,
@@ -299,7 +299,7 @@ export const DataCoinsPurches = (token) => {
 export const EditWalletUser = (walletId, payload) => {
   return async (dispatch) => {
     try {
-      const res = await axios.put(`http://localhost:3001/editwallet/${walletId}`, payload);
+      const res = await axios.put(`https://x-power-trade-production.up.railway.app/editwallet/${walletId}`, payload);
 
       const data = res.data;
 
