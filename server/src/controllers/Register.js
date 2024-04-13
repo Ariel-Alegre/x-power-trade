@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'arielalegre98@gmail.com',
+    user: 'xpowertrade60@gmail.com',
     pass: process.env.PASS,
   },
   tls: {
@@ -51,6 +51,36 @@ module.exports = {
       const role = ['admin1@gmail.com', 'admin2@fmail.com'].includes(email) ? 'admin' : 'user';
 
       const backgroundColor = getRandomColor(); // Genera un color aleatorio
+      const emailContent = `
+      <html>
+      <body style="text-align: center;  background: rgb(253, 251, 251); padding: 2em">
+        <div style="display: inline-block; text-align: left; padding: 1em; background: white;  width: 90%" >
+          <div style="margin: 0 auto; text-align: center;">
+            <img src="https://trading-ten-nu.vercel.app/static/media/logo-1.c882b769890698e88e7d.png" alt="Logo de la empresa" style="display: block; max-width: 150px; margin: 0 auto;">
+          </div>
+    
+          <p style="color: black;">Estimado/a ${name} ${lastName},</p>
+          <p style="color: black;">Estamos encantados de confirmar de su Cuenta X POWER TRADE está creada que ahora puede comenzar su próspero viaje comercial con X POWER TRADE utilizando sus credenciales de Cuenta X POWER TRADE a continuación</p>
+          <p style="color: black;">Email: ${email} </p>
+          <p style="color: black;">Contraseña: ${password} </p>
+          <p style="color: black;">Moneda: USD </p>
+          <p><strong>*Para proteger su cuenta, no comparta sus credenciales con nadie.</strong></p>
+          <p>¡Agregar fondos a su cuenta nunca ha sido tan facil ¡Haga click en el botón de abajo e inicie sesión! </p>
+          <p><a href="https://xpowertrade.com/auth/login"><button style="padding: 1em;  background: rgb(0, 172, 240); color: white; cursor: pointer;margin: 0 auto; text-align: center;">¡INICIAR SESIÓN!</button></a></p>
+          
+    
+       
+        </div>
+      </body>
+    </html>
+      `;
+
+      await transporter.sendMail({
+        from: 'soporte@xpowertrade.com',
+        to: email,
+        subject: '¡Bienvenido a nuestra plataforma!',
+        html: emailContent,
+      });
 
       const newUser = await User.create({
         name,
@@ -70,37 +100,7 @@ module.exports = {
       const tokenPayload = { id: newUser.id, role: newUser.role };
       const token = jwt.sign(tokenPayload, process.env.FIRMA_TOKEN);
 
-      const emailContent = `
-      <html>
-      <body style="text-align: center;  background: rgb(253, 251, 251); padding: 2em">
-        <div style="display: inline-block; text-align: left; padding: 1em; background: white;  width: 90%" >
-          <div style="margin: 0 auto; text-align: center;">
-            <img src="https://trading-ten-nu.vercel.app/static/media/logo-1.c882b769890698e88e7d.png" alt="Logo de la empresa" style="display: block; max-width: 150px; margin: 0 auto;">
-          </div>
-    
-          <p style="color: black;">Estimado/a ${name} ${lastName},</p>
-          <p style="color: black;">Estamos encantados de confirmar de su Cuenta X POWER TRADE está creada que ahora puede comenzar su próspero viaje comercial con X POWER TRADE utilizando sus credenciales de Cuenta X POWER TRADE a continuación</p>
-          <p style="color: black;">Email: ${email} </p>
-          <p style="color: black;">Contraseña: ${password} </p>
-          <p style="color: black;">Moneda: USD </p>
-          <p><strong>*Para proteger su cuenta, no comparta sus credenciales con nadie.</strong></p>
-          <p>¡Agregar fondos a su cuenta nunca ha sido tan facil ¡Haga click en el botón de abajo e inicie sesión! </p>
-          <p><button style="padding: 1em;  background: rgb(0, 172, 240); color: white; cursor: pointer;margin: 0 auto; text-align: center;">¡INICIAR SESIÓN!</button></p>
-          
-    
-       
-        </div>
-      </body>
-    </html>
-      `;
-
-      await transporter.sendMail({
-        from: 'arielalegre98@gmail.com',
-        to: email,
-        subject: '¡Bienvenido a nuestra plataforma!',
-        html: emailContent,
-      });
-
+   
       console.log('Usuario creado correctamente');
       return res.json({ token });
     } catch (error) {
