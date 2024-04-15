@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
     user: 'xpowertrade60@gmail.com',
     pass: process.env.PASS,
   },
+  socketTimeout: 15000,
   tls: {
     rejectUnauthorized: false,
   },

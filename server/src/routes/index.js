@@ -6,7 +6,6 @@ const routerRegister = require('./register_router');
 const routerLogin = require('./login_router');
 const routerUsers = require('./users_router');
 /* const routerLeads = require('./leads_router')  */
-const routerMercado = require('./mercar_router');
 const routerPayment = require('./payment_router.js');
 const routerBalance = require('./balance_router.js');
 
@@ -153,7 +152,7 @@ router.post('/init', function (req, res, next) {
 });
 
 
-router.use('/', routerRegister, routerLogin, routerUsers, routerMercado, routerPayment, routerBalance)
+router.use('/', routerRegister, routerLogin, routerUsers, routerPayment, routerBalance)
 
 
 
