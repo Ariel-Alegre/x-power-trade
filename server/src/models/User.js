@@ -23,8 +23,18 @@ module.exports = (sequelize) => {
     phone: {
       type: DataTypes.STRING
     },
+    accountNumber: {
+      type: DataTypes.STRING
+    },
+    
     backgroundColor: {
       type: DataTypes.STRING
+    },
+    front: {
+      type: DataTypes.STRING,
+    },
+    back: {
+      type: DataTypes.STRING,
     },
     role: {
       type: DataTypes.STRING

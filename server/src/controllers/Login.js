@@ -15,13 +15,11 @@ module.exports = {
         return res.status(404).json({ message: 'Usuario no encontrado' });
       }
 
-      const isMatch = await bcrypt.compare(password, user.password);
-
-      if (!isMatch) {
+      /* const isMatch = await bcrypt.compare(password, user.password); */
+      if (password !== user.password) {
         console.log('Contraseña incorrecta');
         return res.status(400).json({ message: 'Credenciales incorrectas' });
       }
-
       const tokenPayload = {
         id: user.id,
         email: user.email,
