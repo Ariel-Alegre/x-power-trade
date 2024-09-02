@@ -39,6 +39,9 @@ module.exports = (sequelize) => {
     role: {
       type: DataTypes.STRING
     },
+    status: {
+      type: DataTypes.STRING
+    },
   });
 
   return User;

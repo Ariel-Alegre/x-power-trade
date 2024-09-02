@@ -86,7 +86,7 @@ module.exports = {
     </html>
       `;
 
-  const send =  await transporter.sendMail({
+/*   const send =  await transporter.sendMail({
         from: 'soporte@xpowertrade.com',
         to: email,
         subject: '¡Bienvenido a nuestra plataforma!',
@@ -99,7 +99,7 @@ module.exports = {
       } else {
         console.log('Error al enviar email');
         
-      } 
+      }  */
       const newUser = await User.create({
         name,
         lastName,
