@@ -1,34 +1,58 @@
+import * as React from "react";
 import styles from "./Identify.module.scss";
-import Logo from '../../Logos/logo-1.png'
+import { useSelector, useDispatch } from "react-redux";
+import { DataPersonal } from "../../Redux/action";
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 export default function Identify() {
+  const dispatch = useDispatch();
+  const dataPersonal = useSelector((state) => state.dataPersonal);
+  const token = useSelector((state) => state.token);
+
+  React.useEffect(() => {
+    dispatch(DataPersonal(token));
+  }, [dispatch, token]);
   return (
     <div className={styles.IdentifyContainer}>
       
-      <div className={styles.IdentifyBox}>
-        <div className={styles.textContainer}>
+      <div >
+         <ButtonGroup  aria-label="Basic button group" >
+
+      <Button
+      sx={{color: '#000'}}
+      >
+      <div className={styles.textContainer}>
           <div className={styles.activeContainer}>
-            <div className={styles.active}></div>
-            <span>Número de la cuenta</span>
+            <span>Número de cuenta</span>
           </div>
-          <strong className={styles.usd}>1303473995</strong>
+          <strong>{dataPersonal.accountNumber && dataPersonal.accountNumber }</strong>
         </div>
-        <div className={styles.textContainer}>
+      </Button>
+      <Button
+      sx={{color: '#000'}}
+      >
+      <div className={styles.textContainer}>
           <div className={styles.activeContainer}>
-            <div className={styles.active}></div>
           <span>Divisa</span>
           </div>
           <strong>USD</strong>
-          <div class={styles.hr}></div>
         </div>
-        <div className={styles.textContainer}>
+      </Button>
+      <Button
+      sx={{color: '#000'}}
+      >
+      <div className={styles.textContainer}>
           <div className={styles.activeContainer}>
             <div className={styles.active}></div>
             <span>Tipo</span>
           </div>
           <strong>Real</strong>
-          <div class={styles.hr}></div>
         </div>
+      </Button>
+    </ButtonGroup>
+     
+    
       </div>
     </div>
   );

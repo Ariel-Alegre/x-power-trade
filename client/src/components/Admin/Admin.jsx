@@ -89,7 +89,7 @@ function Admin(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Administrar
           </Typography>
         </Toolbar>
       </AppBar>

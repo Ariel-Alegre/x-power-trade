@@ -50,7 +50,7 @@ function Sidebar(props) {
   const dataPersonal = useSelector((state) => state.dataPersonal);
   const token = useSelector((state) => state.token);
   const [selectedItem, setSelectedItem] = React.useState(null);
-console.log(dataPersonal)
+
   const handleMenuItemClick = (item) => {
     setSelectedItem(item);
     setMobileOpen(false);
@@ -76,11 +76,15 @@ console.log(dataPersonal)
           <ListItem
             disablePadding
             onClick={() => handleMenuItemClick("dashboard")}
-            sx={{ backgroundColor: selectedItem === "dashboard" ? "#D6D6D6" : "" }}
+            sx={{ backgroundColor: selectedItem === "dashboard" ? "#1976d2" : "", color:  selectedItem === "dashboard" ? "#fff" : "", ":hover": {backgroundColor: "#1976d2", color: "#fff"} }}
+
           >
             <ListItemButton>
               <ListItemIcon>
-                <DashboardIcon />
+                <DashboardIcon
+            sx={{  color:  selectedItem === "dashboard" ? "#fff" : "",  }}
+                
+                />
               </ListItemIcon>
               <ListItemText>Panel de control</ListItemText>
             </ListItemButton>
@@ -91,11 +95,15 @@ console.log(dataPersonal)
           <ListItem
             disablePadding
             onClick={() => handleMenuItemClick("deposit")}
-            sx={{ backgroundColor: selectedItem === "deposit" ? "#D6D6D6" : "" }}
+            sx={{ backgroundColor: selectedItem === "deposit" ? "#1976d2" : "", color:  selectedItem === "deposit" ? "#fff" : "", ":hover": {backgroundColor: "#1976d2", color: "#fff"} }}
+
           >
             <ListItemButton>
               <ListItemIcon>
-                <AccountBalanceWalletIcon />
+                <AccountBalanceWalletIcon
+            sx={{  color:  selectedItem === "deposit" ? "#fff" : "", }}
+                
+                />
               </ListItemIcon>
               <ListItemText>Depósito</ListItemText>
             </ListItemButton>
@@ -106,11 +114,15 @@ console.log(dataPersonal)
           <ListItem
             disablePadding
             onClick={() => handleMenuItemClick("trading")}
-            sx={{ backgroundColor: selectedItem === "trading" ? "#D6D6D6" : "" }}
+            sx={{ backgroundColor: selectedItem === "trading" ? "#1976d2" : "", color:  selectedItem === "trading" ? "#fff" : "", ":hover": {backgroundColor: "#1976d2", color: "#fff"} }}
+
           >
             <ListItemButton>
               <ListItemIcon>
-                <InstallDesktopIcon />
+                <InstallDesktopIcon
+            sx={{  color:  selectedItem === "trading" ? "#fff" : "", }}
+                
+                />
               </ListItemIcon>
               <ListItemText>Hacer Trading ahora</ListItemText>
             </ListItemButton>
@@ -121,11 +133,15 @@ console.log(dataPersonal)
           <ListItem
             disablePadding
             onClick={() => handleMenuItemClick("withdraw")}
-            sx={{ backgroundColor: selectedItem === "withdraw" ? "#D6D6D6" : "" }}
+            sx={{ backgroundColor: selectedItem === "withdraw" ? "#1976d2" : "", color:  selectedItem === "withdraw" ? "#fff" : "", ":hover": {backgroundColor: "#1976d2", color: "#fff"}}}
+
           >
             <ListItemButton>
               <ListItemIcon>
-                <MonetizationOnIcon />
+                <MonetizationOnIcon 
+            sx={{  color:  selectedItem === "withdraw" ? "#fff" : "", }}
+                
+                />
               </ListItemIcon>
               <ListItemText>Retirar fondos</ListItemText>
             </ListItemButton>
@@ -136,11 +152,15 @@ console.log(dataPersonal)
           <ListItem
             disablePadding
             onClick={() => handleMenuItemClick("support")}
-            sx={{ backgroundColor: selectedItem === "support" ? "#D6D6D6" : "" }}
+            sx={{ backgroundColor: selectedItem === "support" ? "#1976d2" : "", color:  selectedItem === "support" ? "#fff" : "", ":hover": {backgroundColor: "#1976d2", color: "#fff"}}}
+
           >
             <ListItemButton>
               <ListItemIcon>
-                <PhoneIcon />
+                <PhoneIcon 
+            sx={{  color:  selectedItem === "support" ? "#fff" : "", }}
+                
+                />
               </ListItemIcon>
               <ListItemText>Atencion al cliente</ListItemText>
             </ListItemButton>

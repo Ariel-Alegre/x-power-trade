@@ -1,249 +1,200 @@
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
-import styles from "./Personal.module.scss";
-import Identify from "../Identify/Identify";
-import { useEffect, useState } from "react";
-import { DataPersonal  } from '../../Redux/action';
-import {useSelector, useDispatch} from 'react-redux';
 import CircularProgress from "@mui/material/CircularProgress";
+import { message } from "antd";
+import { DataPersonal, UpdatePersonal } from "../../Redux/action";
 
-export default function Personal() {
+export default function Example() {
   const dispatch = useDispatch();
-  const dataPersonal = useSelector(state => state.dataPersonal);
-  const token = useSelector(state => state.token);
+  const dataPersonal = useSelector((state) => state.dataPersonal);
+  const token = useSelector((state) => state.token);
+  const [messageApi, contextHolder] = message.useMessage();
+
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-     setTimeout(async () => {
-       setLoading(false);
-     }, 2000);
-   }, []);
-  
+  const [loadingButton, setLoadingButton] = useState(false);
+
+  const Success = () => {
+    messageApi.open({
+      type: "success",
+      content: "Actualizado correctamente",
+    });
+  };
+
+  const [data, setData] = useState({
+    userId: dataPersonal.id,
+    name: "",
+    lastName: "",
+    email: "",
+    password: "",
+    phone: "",
+  });
 
   useEffect(() => {
-    dispatch(DataPersonal(token))
+    setData({
+      ...data,
+      userId: dataPersonal.id || "",
+      name: dataPersonal.name || "",
+      lastName: dataPersonal.lastName || "",
+      email: dataPersonal.email || "",
+      password: dataPersonal.password || "",
+      phone: dataPersonal.phone || "",
+    });
+  }, [dataPersonal]);
+
+  useEffect(() => {
+    setTimeout(async () => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    dispatch(DataPersonal(token));
   }, [token, dispatch]);
 
-  
-    
-    
-    return (
-      <>
-                    {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-          <CircularProgress color="primary"  />
-        </div>
-      ) : (
-      <div>
-      <h1 className={styles.h1}>Informacion personal</h1>
-      <div className={styles.PersonalContainer}>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoadingButton(true);
+    setTimeout(async () => {
+      try {
+        dispatch(UpdatePersonal(data));
+        alert('Actualizado correctamente')
+      } catch (error) {
+        messageApi.open({
+          type: "error",
+          content: "Error a la hora de actualizar",
+        });
+        console.log(error);
+      } finally {
+        setLoadingButton(false);
+      }
+    }, 1000);
+  };
 
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": {
-              margin: "20px",
-            },
-            
-          }}
-          autoComplete="off"
-          display="grid"
-          justifyContent="center"
-          validate
-          >
-          <div className={styles.inputContainer}>
-            <div className={styles.data}>
-              <label htmlFor="">Nombre</label>
-              <TextField
-                id="outlined-basic"
+  const handleChange = (e) => {
+    e.preventDefault();
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      {contextHolder}
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Actualizar información
+        </h2>
+        <p className="mt-2 text-lg leading-8 text-gray-600">
+          Actualizar mi información personal.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Nombre
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="name"
                 name="name"
-                value={dataPersonal.name}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-            <div className={styles.data}>
-              <label htmlFor="">Apellido(s)</label>
-              <TextField
-                id="outlined-basic"
-                name="lastName"
-                value={dataPersonal.lastName}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-          </div>
-
-          <div className={styles.inputContainer}>
-            <div className={styles.data}>
-              <label htmlFor="">Correo electrónico</label>
-              <TextField
-                id="outlined-basic"
-                name="email"
-                value={dataPersonal.email}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-            <div className={styles.data}>
-              <label htmlFor="">Contraseña</label>
-              <TextField
-                id="outlined-basic"
-                name="password"
-                value={dataPersonal.password}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-          </div>
-          <div className={styles.inputContainer}>
-            <div className={styles.data}>
-              <label htmlFor="">País residencial</label>
-              <TextField
-                id="outlined-basic"
-                name="country"
-                value= {dataPersonal.country}
-                
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
+                onChange={handleChange}
+                value={data.name}
+                type="text"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
-            <div className={styles.data}>
-              <label htmlFor="">Ciudad</label>
-              <TextField
-                id="outlined-basic"
-                name="city"
-                value={dataPersonal.city}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-          }}
-          />
+          </div>
+          <div>
+            <label
+              htmlFor="lastName"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Apellido
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="lastName"
+                value={data.lastName}
+                onChange={handleChange}
+                name="lastName"
+                type="text"
+                autoComplete="family-name"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
             </div>
           </div>
-
-          <div className={styles.inputContainer}>
-            <div className={styles.data}>
-              <label htmlFor="">Calle</label>
-              <TextField
-                id="outlined-basic"
-                name="street"
-                value={dataPersonal.street}
-                disabled 
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-
-            <div className={styles.data}>
-              <label htmlFor="">Código postal</label>
-              <TextField
-                id="outlined-basic"
-                name="postal_code"
-                value={dataPersonal.postal_code}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Correo eléctronico
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="email"
+                value={data.email}
+                onChange={handleChange}
+                name="email"
+                type="email"
+                autoComplete="email"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
             </div>
           </div>
-          <div className={styles.inputContainer}>
-            <div className={styles.data}>
-              <label htmlFor="">Teléfono</label>
-              <TextField
-                id="outlined-basic"
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="password"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Contraseña
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="password"
+                name="password"
+                value={data.password}
+                onChange={handleChange}
+                type="text"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Teléfono
+            </label>
+            <div className="relative mt-2.5">
+              <input
+                id="phone"
                 name="phone"
-                value={dataPersonal.phone}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
-            </div>
-            <div className={styles.data}>
-              <label htmlFor="">Fecha de nacimiento</label>
-
-              <TextField
-                id="outlined-basic"
-                name="birthdate"
-                value={dataPersonal.birthdate}
-                disabled
-                sx={{                     
-                  m: 1,    
-                  width: 400,
-                  background:"#E2E2E2EF",      
-                  "@media (max-width: 768px)": {
-                    width: "100%", // Ancho completo en pantallas pequeñas
-                  }, 
-                }}
-                />
+                onChange={handleChange}
+                value={data.phone}
+                type="tel"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
             </div>
           </div>
-          <Button type="submit" variant="contained">
-            Actualizar
+        </div>
+        <div className="mt-10">
+          <Button type="submit" variant="contained" sx={{ width: "100%" }}>
+            {loadingButton ? (
+              <CircularProgress size={25} thickness={5} sx={{ color: "#fff" }} />
+            ) : (
+              "Actualizar"
+            )}
           </Button>
-        </Box>
-      </div>
+        </div>
+      </form>
     </div>
-      )}
-
-                </>
   );
 }

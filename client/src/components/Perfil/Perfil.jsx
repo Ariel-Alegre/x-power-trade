@@ -5,11 +5,11 @@ import { DataPersonal } from "../../Redux/action";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
+import styles from './Perfil.module.css';
 
 export default function Perfil() {
     const dispatch = useDispatch();
   const dataPersonal = useSelector((state) => state.dataPersonal);
-  console.log(dataPersonal);
   const token = useSelector((state) => state.token);
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
@@ -50,6 +50,22 @@ export default function Perfil() {
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">Teléfono</dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{dataPersonal.phone}</dd>
+          </div>
+
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">Documento frontal</dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <img src={dataPersonal.front} alt="Documento frontal" className={styles.img_identify} />
+              
+              </dd>
+          </div>
+
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">Documento dorsal</dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <img src={dataPersonal.back} alt="Documento dorsal"  className={styles.img_identify}/>
+              
+              </dd>
           </div>
 {/*           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">About</dt>

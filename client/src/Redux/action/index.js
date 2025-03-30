@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const Register = (payload) => {
   return async (dispatch) => {
-    const res = axios.post('https://x-power-trade-production.up.railway.app/register', payload)
+    const res = await axios.post('https://x-power-trade-production.up.railway.app/register', payload)
     const data = res.data
 
     return dispatch({
@@ -112,6 +112,63 @@ export const DataPersonal = (token) => {
     }
   };
 };
+export const UpdatePersonal = (payload) => {
+  return async (dispatch) => {
+    try {
+      const res = await axios.put(`https://x-power-trade-production.up.railway.app/update-personal`, payload);
+
+      const data = res.data;
+
+      dispatch({
+        type: 'UPDATE_PERSONAL',
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error al editar wallet del usuario:", error);
+      // Podrías dispatch una acción de error si es necesario
+    }
+  };
+};
+
+export const UpdateIdentify= (payload) => {
+  return async (dispatch) => {
+    try {
+      const res = await axios.put(`https://x-power-trade-production.up.railway.app/upload-identify`, payload);
+
+      const data = res.data;
+
+      dispatch({
+        type: 'UPDATE_IDENTIFY',
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error al editar wallet del usuario:", error);
+      // Podrías dispatch una acción de error si es necesario
+    }
+  };
+};
+
+
+
+export const SuportSend = (payload) => {
+  return async (dispatch) => {
+    try {
+      const res = await axios.post(`https://x-power-trade-production.up.railway.app/withdraw`, payload);
+
+      const data = res.data;
+
+      dispatch({
+        type: 'SOPORT_SEND',
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error al enviar la solicitud de retiro:", error);
+      // Podrías dispatch una acción de error si es necesario
+    }
+  };
+};
+
+
 
 export const Coins = () => {
   return async (dispatch) => {
@@ -154,10 +211,18 @@ export const ChangePriceCoins = (coinId, newPricePurchase, newPriceSale) => {
 };
 
 
-export const PaymentDeposite = (payload) => {
+export const PaymentDeposite = (token, payload) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post('https://x-power-trade-production.up.railway.app/payment', payload);
+      const res = await axios.post('https://x-power-trade-production.up.railway.app/payment', payload, {
+        headers: {
+          Authorization: token,
+        },
+      }).then((response) => {
+        window.location.href = response.data.redirect_url;
+      }).catch((error) => {
+        console.error(error);
+      });
       const data = res.data;
 
       dispatch({
@@ -313,3 +378,5 @@ export const EditWalletUser = (walletId, payload) => {
     }
   };
 };
+
+

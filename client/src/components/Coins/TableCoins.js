@@ -1,6 +1,8 @@
 import React from "react";
 import CoinRow from "./CoinRow";
 import styles from './Coins.module.css';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 const titles = ["Simbolo", "Compra", "Rating", "Venta", "Ver"];
 
@@ -15,6 +17,8 @@ const TableCoins = ({ coins, search }) => {
 
   if (filteredCoins.length === 0) return <div>no coins</div>
   return (
+    <Card sx={{ display: "flex", width: "100%" }}>
+      <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
     <div className={styles.table}>
       <table className="table">
         <thead
@@ -38,7 +42,8 @@ const TableCoins = ({ coins, search }) => {
         </tbody>
       </table>
     </div>
-
+    </CardContent>
+    </Card>
   );
 };
 

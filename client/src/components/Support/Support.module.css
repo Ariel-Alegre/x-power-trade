@@ -143,7 +143,18 @@
  margin-bottom: 30px;
 
 }
-
+.email_text {
+  font-size: 15px;
+}
+.send_email{
+ background-color: #1976d2;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 10%;
+  text-align: center;
+  margin-top: 1em;
+}
 @media screen and (max-width: 767px) {
   .SupportContainer img {
     width: 100%;

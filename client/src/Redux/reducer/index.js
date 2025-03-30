@@ -128,7 +128,24 @@ datauser: []
                         return {
                           ...state,
                         };
-                      
+
+                        case 'UPDATE_PERSONAL':
+                          return {
+                            ...state,
+                          };
+
+                          case 'UPDATE_IDENTIFY':
+                          return {
+                            ...state,
+                          };
+
+                          case 'SOPORT_SEND':
+                            return {
+                              ...state,
+                            };
+                          
+                          
+                        
 
       default: return { ...state }
     }

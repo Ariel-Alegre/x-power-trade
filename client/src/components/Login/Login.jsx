@@ -89,7 +89,7 @@ useEffect(() => {
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Ariel alegre
+            Iniciar sesión
           </h2>
           <p className="mt-10 text-center ">
             ¿Aún no tiene una cuenta?

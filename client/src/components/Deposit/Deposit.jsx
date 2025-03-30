@@ -5,15 +5,12 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Identify from "../Identify/Identify";
-import AccountMenu from "../AccountMenu/AccountMenu";
-import { UserOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import "./Deposit.css";
 import Button from "@mui/material/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { PaymentDeposite } from "../../Redux/action";
 import DepositCoin from "./DepositCoin/DepositCoin";
-import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 
 function CustomTabPanel(props) {
@@ -50,21 +47,19 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
-  const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
-
+  const [loadingSuccess, setLoadingSuccess] = React.useState(false);
+const dispatch = useDispatch();
   const [value, setValue] = React.useState(0);
   const [data, setData] = React.useState({
     amount: "",
   });
-  const [redirected, setRedirected] = React.useState(false); // Nu
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const token = useSelector((state) => state.token);
-  const [buttonPressed, setButtonPressed] = React.useState(false);
 
   const handleChangeAmount = (e) => {
     setData({
@@ -73,31 +68,30 @@ export default function BasicTabs() {
     });
   };
 
-  const handleSubmitAmount = (e) => {
+  const handleSubmitAmount = async (e) => {
     e.preventDefault();
-    setButtonPressed(true);
+    setLoadingSuccess(true)
+  setTimeout(async () => {
+
+    try {
+      
+      await dispatch(PaymentDeposite(token, data ));
+    } catch (error) {
+      console.error(error)
+    } finally {
+    setLoadingSuccess(false)
+
+    }
+
+}, 3000);
+
   };
 
-  React.useEffect(() => {
-    if (buttonPressed) {
-      axios
-        .post("http://localhost:3001/payment", data, {
-          headers: {
-            Authorization: token,
-          },
-        })
-        .then((response) => {
-          window.location.href = response.data.redirect_url;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }
-  }, [buttonPressed]);
+
   React.useEffect(() => {
     setTimeout(async () => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
   return (
     <div>
@@ -132,10 +126,16 @@ export default function BasicTabs() {
               type="number"
               name="amount"
               value={data.amount}
+              required
             />
 
             <Button type="submit" variant="contained" sx={{ marginTop: "2em" }}>
-              Continuar
+            {loadingSuccess ? (
+                  <CircularProgress size={25} thickness={5} sx={{ color: '#fff' }} />
+                ) : (
+                  'Continuar'
+                )}
+              
             </Button>
           </CustomTabPanel>
         </form>

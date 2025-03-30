@@ -70,8 +70,8 @@ export default function RegisterForm() {
           navigate("/auth/login")
         }
       } catch (error) {
-        Error();
         console.log(error);
+        Error();
       } finally {
         setLoadingSuccess(false);
         setIsSubmitting(false);

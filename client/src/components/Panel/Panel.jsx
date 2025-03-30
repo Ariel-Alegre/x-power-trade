@@ -19,6 +19,8 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 600,
+  maxWidth: "100%",
+
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -271,10 +273,16 @@ export default function Panel() {
               </Card>
             ) : (
               <div className={styles.position_closed}>
-                <Card >
+                <Card>
                   <h4>Posiciones abiertas</h4>
-                  <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
-                    <CardContent sx={{ flex: "1 0 auto",  width: "100%" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
                       <Typography
                         variant="subtitle1"
                         color="text.secondary"

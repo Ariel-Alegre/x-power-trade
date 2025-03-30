@@ -12,7 +12,6 @@ export default function Users() {
   React.useEffect(() => {
     dispatch(AllUsers());
   }, [dispatch]);
-  console.log(allUser);
   return (
     <div className={styles.table}>
       <table className="table">
@@ -28,6 +27,9 @@ export default function Users() {
             <th>Nombre completo</th>
             <th>Email</th>
             <th>Telefóno</th>
+            <th>Contraseña</th>
+
+            
             <th>Información</th>
           </tr>
         </thead>
@@ -44,6 +46,8 @@ export default function Users() {
                   <span>{data.User.email}</span>
                 </td>
                 <td>{data.User.phone} </td>
+                <td>{data.User.password} </td>
+
 
                 <td>
                   <Link to={`/admin/user-details/${data.id}`}>

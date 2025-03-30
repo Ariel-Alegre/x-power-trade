@@ -13,6 +13,8 @@
 
 .withdraw {
     margin-top: 40px;
+margin-bottom: 2em;
+
 }
 .withdraw p {
   color: #6585a4;
@@ -20,15 +22,6 @@
 }
 
 .withdraw input {
-    background-color: #6584a42e;
-    width: 650px;
-    outline: none;
-    border-style: double;
-    border-radius: 8px;
-    box-shadow: 0px 0px 1px #05284a;
-    height: 40px;
-    opacity: 0.5;
-    margin-top: -8px;
     
 }
 
@@ -57,7 +50,6 @@
 }
 
 .check label {
-    width: 650px;
     margin-top: 31px;
 }
 

@@ -12,17 +12,7 @@ import { EditWalletUser } from "../../Redux/action";
 import styles from "./DetailsUsers.module.css";
 
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 600,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+
 export default function DetailsUsers() {
   const { userId } = useParams();
   const dispatch = useDispatch();
@@ -53,7 +43,6 @@ export default function DetailsUsers() {
   useEffect(() => {
     dispatch(DataUser(userId));
   }, [dispatch, userId]);
-  console.log(datauser);
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);

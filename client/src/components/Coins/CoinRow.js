@@ -16,6 +16,8 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 600,
+  maxWidth:"100%",
+
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -29,6 +31,7 @@ const StylesCoin = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 600,
+  maxWidth:"100%",
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -180,10 +183,8 @@ const CoinRow = ({ coin, index }) => {
 
   const handleAmountChange = (e) => {
     const newValue = e.target.value;
-    if (!/^[1-9][0-9]*$/.test(newValue)) {
       // Si el valor no cumple con la expresión regular (no comienza con 0), actualizar el estado
       setAmount(newValue);
-    }
   };
 
 
@@ -263,7 +264,7 @@ const CoinRow = ({ coin, index }) => {
                   <div>
                     <Input
                       size="large"
-                      placeholder="Introduzca la cantidad del depósito"
+                      placeholder="Introduzca la cantidad"
                       prefix={"USD"}
                       type="number"
                       name="amount"
